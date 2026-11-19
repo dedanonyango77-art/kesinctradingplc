@@ -1,130 +1,184 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KES OIL - DEDAN ONYANGO CEO - KISUMU - PLC</title>
+<html lang="en" data-theme="midnight"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KES OIL — DEDAN ONYANGO CEO — KISUMU — PLC</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#070a14;--card:#11162a;--card2:#171e3a;--border:#242d4d;--accent:#00d395;--red:#ff4757;--blue:#3b82f6;--orange:#f59e0b;--gold:#FFD700;--text:#e8ecf6;--muted:#8b93a7}
-*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui}
-body{background:var(--bg);color:var(--text);min-height:100vh}
-.header{background:#0f1329;border-bottom:1px solid var(--border);padding:14px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:30}
-.brand{font-weight:900;font-size:18px}.brand span{color:var(--gold)}
-.live-badge{background:var(--accent);color:#000;font-size:11px;padding:4px 10px;border-radius:20px;font-weight:900}
-.main{max-width:1380px;margin:0 auto;padding:16px 20px 100px}
-.price-hero{position:relative;background:radial-gradient(ellipse at center, #1a2e5a 0%, #11162a 60%, #0b1530 100%);border:1px solid #2a4a8a;border-radius:20px;padding:20px 24px;display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:center;margin-bottom:16px;overflow:hidden}
-.bigOil{position:relative;z-index:2;font-size:40px;font-weight:900;letter-spacing:1.5px;background:linear-gradient(180deg, #FFD700 0%, #FFA500 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.price{position:relative;z-index:2;font-size:38px;font-weight:900;color:#fff}
-.sub{font-size:12px;color:var(--muted);margin-top:6px}
-.tabs{display:flex;gap:8px;overflow:auto;padding:8px 0 12px;position:sticky;top:54px;background:var(--bg);z-index:20}
-.tabs button{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:10px 16px;border-radius:999px;font-size:12px;font-weight:800;white-space:nowrap;cursor:pointer}
+:root{--bg:#070a14;--card:#11162a;--card2:#171e3a;--border:#242d4d;--accent:#00d395;--red:#ff4757;--blue:#3b82f6;--orange:#f59e0b;--gold:#FFD700;--text:#eef1f8;--muted:#9aa3b8}
+[data-theme="gold"]{--bg:#0d0a00;--card:#1a1400;--card2:#241c00;--border:#4a3a00;--accent:#FFD700;--text:#fff8dc;--muted:#c9b86a}
+[data-theme="emerald"]{--bg:#04120c;--card:#0a1f14;--card2:#0e2a1c;--border:#1a4a32;--accent:#00ff88;--text:#e6fff2;--muted:#8abfa5}
+[data-theme="ocean"]{--bg:#020a1a;--card:#0a1a33;--card2:#0e2547;--border:#1a3a6a;--accent:#00bfff;--text:#e6f5ff;--muted:#8ab4d6}
+[data-theme="light"]{--bg:#f4f6f9;--card:#ffffff;--card2:#eef2f7;--border:#d8dee8;--accent:#059669;--text:#0f172a;--muted:#64748b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Inter',system-ui}
+h1{font-family:'Playfair Display',serif}
+h3{font-family:'Inter',sans-serif;font-size:13px;letter-spacing:.6px;font-weight:700;text-transform:uppercase;color:var(--muted)}
+.font-serif{font-family:'Playfair Display',serif}
+.font-elegant{font-family:'Cormorant Garamond',serif}
+.font-mono{font-family:'JetBrains Mono',monospace}
+.header{background:#0f1329;border-bottom:1px solid var(--border);padding:14px 22px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:30;flex-wrap:wrap;gap:10px}
+[data-theme="light"] .header{background:#fff}
+.brand{font-family:'Playfair Display',serif;font-weight:900;font-size:20px;letter-spacing:.3px}
+.brand span{color:var(--gold)}
+.live-badge{background:var(--accent);color:#000;font-size:11px;padding:4px 10px;border-radius:20px;font-weight:800}
+.main{max-width:1320px;margin:0 auto;padding:18px 22px 90px}
+.price-hero{position:relative;background:linear-gradient(135deg,#0a102a 0%,#142a5a 45%,#0e2a22 100%);border:1px solid #2a4a8a;border-radius:20px;padding:26px;display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:center;margin-bottom:18px;overflow:hidden}
+[data-theme="light"] .price-hero{background:linear-gradient(135deg,#fff7e0,#eef6ff)}
+.oil-wave{position:absolute;bottom:0;left:0;width:100%;height:38px;background:linear-gradient(90deg, rgba(255,180,0,.14), rgba(0,211,149,.10), rgba(255,180,0,.14));pointer-events:none}
+.oil-wave-line{position:absolute;bottom:38px;left:0;width:100%;height:1px;background:linear-gradient(90deg,transparent, rgba(255,215,0,.55), transparent)}
+.oil-drop-hero{position:absolute;top:18px;right:28px;width:16px;height:24px;background:linear-gradient(180deg,#FFD700,#FF8C00);border-radius:50% 50% 50% 50% / 62% 62% 38% 38%;box-shadow:0 6px 14px rgba(255,170,0,.35);animation:heroDrop 3.6s ease-in-out infinite}
+.oil-drop-hero:before{content:'';position:absolute;left:4px;top:6px;width:4px;height:8px;background:rgba(255,255,255,.75);border-radius:50%}
+.oil-drop-hero2{position:absolute;top:22px;right:58px;width:10px;height:15px;background:linear-gradient(180deg,#FFD700,#FF8C00);border-radius:50% 50% 50% 50% / 62% 62% 38% 38%;opacity:.55;animation:heroDrop 4.4s ease-in-out infinite;animation-delay:.8s}
+@keyframes heroDrop{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+.bigOil{font-family:'Playfair Display',serif;font-size:42px;font-weight:900;letter-spacing:.5px;line-height:1;color:#FFD700}
+.price{font-family:'JetBrains Mono',monospace;font-size:38px;font-weight:700;color:#fff;letter-spacing:-.5px;margin-top:6px}
+[data-theme="light"] .price{color:#0f172a}
+.sub{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.55}
+.tabs{display:flex;gap:8px;overflow:auto;padding:8px 0 14px;position:sticky;top:56px;background:var(--bg);z-index:20}
+.tabs button{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:10px 16px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap;cursor:pointer;font-family:'Inter',sans-serif}
 .tabs button.active{background:var(--accent);color:#000;border-color:var(--accent)}
 .grid{display:grid;grid-template-columns:2fr 1fr;gap:16px}
-@media(max-width:1100px){.grid{grid-template-columns:1fr};.price-hero{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px}
-.card h3{font-size:11px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin-bottom:14px}
-.row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #1e2642;font-size:13px;align-items:center}
-.btn{padding:10px 14px;border-radius:10px;border:none;font-weight:900;cursor:pointer;font-size:11px}
-.btn-buy{background:var(--accent);color:#000}.btn-sell{background:var(--red);color:#fff}.btn-blue{background:var(--blue);color:#fff}.btn-ghost{background:var(--card2);color:var(--text);border:1px solid var(--border)}.btn-orange{background:var(--orange);color:#000}.btn-logout{background:#ff4757;color:#fff;padding:8px 14px;border-radius:20px;font-size:11px}
-.input,select{width:100%;background:#0c1126;border:1px solid var(--border);color:#fff;padding:12px;border-radius:12px;margin:5px 0;font-size:13px}
+@media(max-width:1100px){.grid{grid-template-columns:1fr}.price-hero{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px}
+.card h3{margin-bottom:14px}
+.row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #1e2642;font-size:13px;align-items:center}
+.btn{padding:11px 14px;border-radius:11px;border:none;font-weight:700;cursor:pointer;font-size:12px;touch-action:manipulation}
+.btn:active{transform:scale(.98)}
+button{cursor:pointer;touch-action:manipulation}
+input,select{touch-action:manipulation}
+.btn-buy{background:var(--accent);color:#000}.btn-sell{background:var(--red);color:#fff}.btn-blue{background:var(--blue);color:#fff}.btn-ghost{background:var(--card2);color:var(--text);border:1px solid var(--border)}.btn-orange{background:var(--gold);color:#000}.btn-logout{background:#ff4757;color:#fff;padding:8px 14px;border-radius:20px;font-size:11px}
+.input,select{width:100%;background:#0c1126;border:1px solid var(--border);color:#fff;padding:12px;border-radius:12px;margin:5px 0;font-size:13px;font-family:'Inter',sans-serif}
+[data-theme="light"] .input,[data-theme="light"] select{background:#fff;color:#0f172a}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .kpi{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.kpi .box{background:rgba(23,30,58,0.8);border:1px solid var(--border);border-radius:14px;padding:12px}
+.kpi .box{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:14px;padding:13px}
 .finance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 @media(max-width:800px){.finance-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:500px){.finance-grid{grid-template-columns:1fr}}
 .f-box{background:#0c1126;border:1px solid var(--border);border-radius:14px;padding:14px}
-.f-box label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;display:block;margin-bottom:4px}
-.f-box b{font-size:16px;font-weight:900}
+[data-theme="light"] .f-box{background:#f8fafc}
+.f-box label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;display:block;margin-bottom:5px;font-weight:700}
+.f-box b{font-size:16px;font-weight:700;font-family:'JetBrains Mono',monospace}
 .f-box.positive{border-color:#00d39544;background:linear-gradient(135deg,#0c1126 0%,#0a2218 100%)}
 .f-box.negative{border-color:#ff475744;background:linear-gradient(135deg,#0c1126 0%,#220a0a 100%)}
 .f-box.gold{border-color:#FFD70044;background:linear-gradient(135deg,#0c1126 0%,#221e00 100%)}
 canvas{width:100%;background:#0c1126;border:1px solid var(--border);border-radius:14px}
 .hidden{display:none}
-.depCard{background:#0c1126;border:1px solid #2a4a8a;border-radius:12px;padding:10px;margin:6px 0;font-size:12px}
-.legitText{line-height:1.9;color:#e8ecf6;font-size:13px}
-.legitTitle{font-size:14px;font-weight:900;margin-bottom:8px}
+.depCard{background:#0c1126;border:1px solid #2a4a8a;border-radius:12px;padding:11px;margin:7px 0;font-size:12px;line-height:1.6}
+[data-theme="light"] .depCard{background:#fff}
+.legitText{line-height:1.85;color:#e8ecf6;font-size:14px}
+[data-theme="light"] .legitText{color:#0f172a}
+.legitTitle{font-size:17px;font-weight:700;margin-bottom:8px;font-family:'Playfair Display',serif}
+.oil-meter{height:6px;background:rgba(255,255,255,.12);border-radius:999px;overflow:hidden;margin-top:10px}
+.oil-meter-fill{height:100%;width:72%;background:linear-gradient(90deg,#FFD700,#FF8C00,#00d395);border-radius:999px}
+.tv-wrap{position:relative;background:#0b0e1e;border:1px solid #1e2642;border-radius:14px;overflow:hidden}
+.tv-toolbar{display:flex;gap:6px;align-items:center;padding:8px 10px;background:#0d1126;border-bottom:1px solid #1e2642;flex-wrap:wrap}
+.tv-btn{background:#1a2142;color:#cbd5e1;border:1px solid #242d4d;padding:6px 10px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer}
+.tv-btn.active{background:#FFD700;color:#000;border-color:#FFD700}
+.tv-ohlc{font-family:'JetBrains Mono',monospace;font-size:11px;color:#cbd5e1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tv-ohlc b{color:#fff}
+.tv-ohlc .up{color:#00d395}.tv-ohlc .down{color:#ff4757}
+.tv-canvas{width:100%;display:block;cursor:crosshair;touch-action:none}
+.tv-hint{font-size:11px;color:#8b93a7;padding:6px 10px;background:#0d1126;border-top:1px solid #1e2642}
+.chat-msg{max-width:85%;padding:9px 12px;border-radius:14px;line-height:1.5;font-size:13px}
 </style></head><body>
 <div class="header">
-<div class="brand">KES INC <span>TRADING PLC</span> <span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:10px;margin-left:6px">🛢️ KES OIL - KISUMU</span> <span class="live-badge">● LIVE</span></div>
-<div style="display:flex;align-items:center;gap:10px;font-size:12px"><span id="whoBadge">Not logged</span> | <span id="fbStatus">● Live</span> <button class="btn btn-logout" onclick="logout()">⏻ Logout</button></div>
+<div class="brand">KES INC <span>TRADING PLC</span> <span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:10px;margin-left:6px;font-family:'Inter'">KES OIL — KISUMU</span> <span class="live-badge">● LIVE</span></div>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+<select id="themeSelect" onchange="setTheme(this.value)" style="width:auto;padding:7px 10px;border-radius:20px;background:#0c1126;color:#fff;border:1px solid #242d4d;font-size:11px;font-weight:700">
+<option value="midnight">Midnight</option><option value="gold">Gold Oil</option><option value="emerald">Emerald</option><option value="ocean">Ocean</option><option value="light">Light</option>
+</select>
+<span id="whoBadge" style="font-family:'Cormorant Garamond',serif;font-size:16px">Not logged</span> | <span id="fbStatus">● Live</span> <button class="btn btn-logout" onclick="logout()">Logout</button></div>
 </div>
 <div id="login" class="main" style="max-width:480px">
-<div class="card">
-<h3>🔐 MEMBER LOGIN - KES OIL TRADING PLC</h3>
-<p class="sub">Built by DEDAN ONYANGO, CEO • Headquartered in Kisumu, Kenya • Official M-Pesa: 0741097779</p>
+<div class="card" style="padding:26px;text-align:center">
+<h1 style="font-size:30px;line-height:1.15">KES OIL <span style="color:var(--gold)">Trading PLC</span></h1>
+<p class="sub" style="font-family:'Cormorant Garamond',serif;font-size:17px">Built by DEDAN ONYANGO, CEO • Kisumu, Kenya • M-Pesa: 0741097779</p>
+<h3 style="margin-top:18px;text-align:left">Member Login</h3>
 <select id="memberSelect" class="input"></select>
 <input id="pinInput" class="input" type="password" placeholder="PIN ****">
-<button class="btn btn-buy" style="width:100%;margin-top:10px;padding:14px" onclick="doLogin()">ENTER TRADING FLOOR 🛢️</button>
-<div class="sub" style="margin-top:10px;text-align:center">Secure • Private • 8 Founding Members Only</div>
+<button class="btn btn-buy" style="width:100%;margin-top:10px;padding:14px" onclick="doLogin()">Enter Trading Floor</button>
+<div class="sub" style="margin-top:10px;text-align:center">Secure • Private • 8 Founding Members Only + Equitify Investor</div>
 </div>
 </div>
 <div id="app" class="main hidden">
 <div class="price-hero">
+<div class="oil-drop-hero"></div><div class="oil-drop-hero2"></div>
 <div>
-<div class="sub" style="color:#8bb0ff">🛢️ KES OIL • Bid <span id="bid1" style="color:var(--red)">222.00</span> / Ask <span id="ask1" style="color:var(--accent)">226.00</span> • KISUMU, KENYA</div>
-<div class="bigOil">🛢️ KES OIL 🛢️</div>
+<div class="sub" style="color:#cbd5e1;font-family:'JetBrains Mono',monospace;margin-top:0">KES OIL • Bid <span id="bid1" style="color:#ff8a8a">222.00</span> / Ask <span id="ask1" style="color:#7ef0c8">226.00</span> • Spread 4.00 • KISUMU, KENYA</div>
+<div style="display:flex;align-items:center;gap:12px;margin-top:10px"><div style="font-size:36px;line-height:1">🛢️</div><div><div class="bigOil">KES OIL</div><div class="font-elegant" style="font-size:18px;color:#e8c97a;margin-top:2px">Crude • Premium • Live Market</div></div></div>
 <div class="price" id="midPrice">224.00 KES</div>
 <div class="sub" id="priceTime">Live Market • M-Pesa 0741097779</div>
+<div class="oil-meter"><div class="oil-meter-fill"></div></div>
+<div class="sub" style="font-size:11px">Market Depth • Oil Flow • Live Liquidity</div>
 <div class="kpi" style="margin-top:14px">
-<div class="box"><label>💰 Available Balance</label><b id="myCash">KES 0.00</b></div>
-<div class="box"><label>🛢️ Shares + Live P/L</label><b id="myShares">0 • P/L KES 0</b></div>
+<div class="box"><label style="font-size:10px;color:var(--muted);letter-spacing:.6px;font-weight:700">AVAILABLE BALANCE</label><b id="myCash" class="font-mono" style="font-size:15px">KES 0.00</b></div>
+<div class="box"><label style="font-size:10px;color:var(--muted);letter-spacing:.6px;font-weight:700">SHARES + LIVE P/L</label><b id="myShares" style="font-size:13px">0 • P/L KES 0</b></div>
 </div>
 </div>
 <div>
 <div class="card" style="padding:12px">
-<div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="font-size:11px;color:var(--muted)">📈 KES OIL LIVE CHART</span><span style="font-size:11px;color:var(--accent)">● LIVE</span></div>
-<canvas id="candleCanvas" height="200"></canvas>
+<div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="font-size:11px;color:var(--muted)">KES OIL LIVE CHART • TRADINGVIEW STYLE</span><span style="font-size:11px;color:var(--accent)">● LIVE</span></div>
+<div class="tv-wrap">
+<div class="tv-toolbar"><button class="tv-btn active" onclick="setTVRange('all',this)">All</button><button class="tv-btn" onclick="setTVRange(30,this)">30</button><button class="tv-btn" onclick="setTVRange(15,this)">15</button><button class="tv-btn" onclick="tvZoom(-1)">− Zoom Out</button><button class="tv-btn" onclick="tvZoom(1)">+ Zoom In</button><button class="tv-btn" onclick="tvReset()">Reset</button><span class="tv-ohlc" id="tvOhlcMini">O — • H — • L — • C —</span></div>
+<canvas id="candleCanvas" class="tv-canvas" height="200"></canvas>
+<div class="tv-hint">Drag to scroll • Scroll wheel to zoom • Hover candle to see OHLC • Bid/Ask hidden on chart</div>
 </div>
 </div>
+</div>
+<div class="oil-wave-line"></div><div class="oil-wave"></div>
 </div>
 <div class="tabs">
-<button id="b-trade" class="active" onclick="switchTab('trade')">🛢️ Trade</button>
-<button id="b-port" onclick="switchTab('port')">🏆 Leaderboard</button>
-<button id="b-finance" style="background:var(--blue);color:#fff" onclick="switchTab('finance')">💰 Finance</button>
-<button id="b-news" onclick="switchTab('news')">📰 News</button>
-<button id="b-charts" onclick="switchTab('charts')">📈 Chart</button>
-<button id="b-company" class="adminOnly hidden" onclick="switchTab('company')">⚙️ Company</button>
-<button id="b-div" class="adminOnly hidden" onclick="switchTab('div')">💸 Dividends</button>
-<button id="b-faq" onclick="switchTab('faq')">🎯 Aim & Purpose</button>
-<button id="b-about" onclick="switchTab('about')">🏢 About</button>
+<button id="b-trade" class="active" onclick="switchTab('trade')">Trade</button>
+<button id="b-port" onclick="switchTab('port')">Leaderboard</button>
+<button id="b-finance" style="background:var(--blue);color:#fff" onclick="switchTab('finance')">Finance</button>
+<button id="b-news" onclick="switchTab('news')">News</button>
+<button id="b-charts" onclick="switchTab('charts')">Chart</button>
+<button id="b-company" class="adminOnly hidden" onclick="switchTab('company')">Company</button>
+<button id="b-div" class="adminOnly hidden" onclick="switchTab('div')">Dividends</button>
+<button id="b-equitify" class="adminOnly hidden" onclick="switchTab('equitify')">Equitify — Institution</button>
+<button id="b-chat" onclick="switchTab('chat')">💬 Members Chat <span id="chatBadge" style="background:#FFD700;color:#000;padding:1px 7px;border-radius:10px;font-size:10px;display:none">0</span></button>
+<button id="b-faq" onclick="switchTab('faq')">Aim & Purpose</button>
+<button id="b-about" onclick="switchTab('about')">About</button>
 </div>
 <div id="tab-trade" class="tab">
 <div class="grid">
 <div>
 <div class="card">
-<h3>MY PORTFOLIO</h3>
+<h3>My Portfolio</h3>
 <div class="grid2">
-<div><div class="sub">AVAILABLE BALANCE</div><div style="font-size:20px;font-weight:900" id="pCash">KES 0.00</div></div>
-<div><div class="sub">SHARES + LIVE P/L</div><div style="font-size:20px;font-weight:900" id="pShares">0 • KES 0</div></div>
+<div><div class="sub">Available Balance</div><div style="font-size:22px;font-weight:800;font-family:'JetBrains Mono',monospace" id="pCash">KES 0.00</div></div>
+<div><div class="sub">Shares + Live P/L</div><div style="font-size:20px;font-weight:800" id="pShares">0 • KES 0</div></div>
 </div>
 </div>
 <div class="card" style="margin-top:16px">
-<h3>TRADE KES OIL <span id="costLabel">Cost: KES 0</span></h3>
+<h3>Trade KES Oil <span id="costLabel" class="font-mono" style="font-size:12px;color:var(--gold);text-transform:none;letter-spacing:0">Cost: KES 0</span></h3>
 <div class="grid2">
 <input id="tradeQty" type="number" class="input" value="10" min="1" oninput="calcCost()">
-<div style="background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px;display:flex;justify-content:space-between"><span style="font-size:11px;color:var(--muted)">TOTAL + 0.5% FEE</span><b id="tradeCost">KES 0</b></div>
+<div style="background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px;display:flex;justify-content:space-between"><span style="font-size:11px;color:var(--muted)">Total + 0.5% Fee</span><b id="tradeCost" class="font-mono">KES 0</b></div>
 </div>
 <div class="grid2" style="margin-top:10px">
-<button class="btn btn-buy" style="padding:16px" onclick="doTrade('buy')">BUY 🛢️ OIL</button>
-<button class="btn btn-sell" style="padding:16px" onclick="doTrade('sell')">SELL OIL</button>
+<button class="btn btn-buy" style="padding:15px" onclick="doTrade('buy')">Buy Oil</button>
+<button class="btn btn-sell" style="padding:15px" onclick="doTrade('sell')">Sell Oil</button>
 </div>
+<div class="sub" style="margin-top:8px;font-family:'Cormorant Garamond',serif;font-size:15px">Buy at Ask (Mid + 2) pushes price up • Sell at Bid (Mid − 2) pushes price down • Every trade updates Price, Balance, Shares, P/L, Leaderboard, Finance, Chart instantly.</div>
 </div>
-<div class="card" style="margin-top:16px"><h3>LIVE TRADE FEED</h3><div id="tradeFeed"></div></div>
+<div class="card" style="margin-top:16px"><h3>Live Trade Feed</h3><div id="tradeFeed"></div></div>
 </div>
 <div>
-<div class="card"><h3>LEADERBOARD - RANKED BY P/L & %</h3><div id="membersList"></div></div>
+<div class="card"><h3>Leaderboard — Ranked by P/L & %</h3><div id="membersList"></div></div>
 </div>
 </div>
-</div><div id="tab-port" class="tab hidden"><div class="card"><h3>🏆 FULL LEADERBOARD - RANKED BY P/L & % DEVIATION</h3><div class="sub" style="margin-bottom:10px">Ranked by Live Profit/Loss after trading + Percentage deviation from investment. Top performer leads.</div><div id="membersListFull"></div></div></div>
-
+</div><div id="tab-port" class="tab hidden"><div class="card"><h3>Full Leaderboard — Ranked by P/L & % Deviation</h3><div class="sub" style="margin-bottom:10px">Ranked by Live Profit/Loss + Percentage deviation from investment. Top performer leads.</div><div id="membersListFull"></div></div></div>
 <div id="tab-finance" class="tab">
 <div class="card" style="border:2px solid #3b82f6">
-<h3 style="color:#60a5fa">💰 FINANCE - LIVE PORTFOLIO</h3>
+<h3 style="color:#60a5fa">Finance — Live Portfolio</h3>
 <div class="finance-grid">
-<div class="f-box gold"><label>💰 Available Balance (After Buying/Selling)</label><b id="fCash">KES 0.00</b><div class="sub" style="margin-top:4px">Cash after trades + dividends added</div></div>
-<div class="f-box"><label>📥 Total Deposited</label><b id="fTotDep" style="color:#00d395">KES 0.00</b><div class="sub" style="margin-top:4px">Total deposits approved</div></div>
-<div class="f-box"><label>📤 Total Withdrawn</label><b id="fTotWith" style="color:#ff4757">KES 0.00</b><div class="sub" style="margin-top:4px">Total withdrawals sent</div></div>
-<div class="f-box"><label>🛢️ Shares Owned</label><b id="fShares">0</b><div class="sub" style="margin-top:4px">KES OIL shares held</div></div>
-<div class="f-box" id="fPLBox"><label>📈 Live P/L (After Buying/Selling)</label><b id="fLivePL">KES 0.00</b><div class="sub" id="fPLPercent" style="margin-top:4px">0.00% deviation</div></div>
-<div class="f-box gold"><label>💎 Equity (Balance + P/L)</label><b id="fEquity" style="color:#FFD700">KES 0.00</b><div class="sub" style="margin-top:4px">Available Balance + Live P/L = Total Wealth</div></div>
+<div class="f-box gold"><label>Available Balance</label><b id="fCash">KES 0.00</b><div class="sub" style="margin-top:4px">Cash after trades + dividends</div></div>
+<div class="f-box"><label>Total Deposited</label><b id="fTotDep" style="color:#00d395">KES 0.00</b><div class="sub" style="margin-top:4px">Total deposits approved</div></div>
+<div class="f-box"><label>Total Withdrawn</label><b id="fTotWith" style="color:#ff4757">KES 0.00</b><div class="sub" style="margin-top:4px">Total withdrawals sent</div></div>
+<div class="f-box"><label>Shares Owned</label><b id="fShares">0</b><div class="sub" style="margin-top:4px">KES OIL shares held</div></div>
+<div class="f-box" id="fPLBox"><label>Live P/L</label><b id="fLivePL">KES 0.00</b><div class="sub" id="fPLPercent" style="margin-top:4px">0.00% deviation</div></div>
+<div class="f-box gold"><label>Equity (Balance + P/L)</label><b id="fEquity" style="color:#FFD700">KES 0.00</b><div class="sub" style="margin-top:4px">Available Balance + Live P/L</div></div>
 </div>
 <div class="grid2" style="margin-top:16px">
 <div><div class="sub">Average Buy Price</div><b id="fAvg">-</b></div>
@@ -132,130 +186,137 @@ canvas{width:100%;background:#0c1126;border:1px solid var(--border);border-radiu
 </div>
 </div>
 <div class="grid" style="margin-top:16px">
-<div class="card"><h3>📲 Deposit KES OIL</h3><input id="depAmt" class="input" type="number" placeholder="Amount e.g 10000"><select id="depMethod" class="input"><option>M-Pesa to 0741097779</option><option>Cash to CEO</option></select><input id="depRef" class="input" placeholder="M-Pesa Code"><button class="btn btn-orange" style="width:100%;padding:14px" onclick="requestDeposit()">Request Deposit 🛢️</button><div id="myDeposits" style="margin-top:12px"></div></div>
-<div class="card"><h3>📤 Withdrawal KES OIL</h3><input id="withAmt" class="input" type="number" placeholder="Amount"><input id="withPhone" class="input" placeholder="Your M-Pesa number"><button class="btn btn-ghost" style="width:100%;border-color:var(--red);color:var(--red);padding:14px" onclick="requestWithdrawal()">Request Withdrawal</button><div id="myWithdrawals" style="margin-top:12px"></div></div>
+<div class="card" style="border:2px solid #f59e0b"><h3>Deposit KES OIL — Goes to Admin</h3><div class="sub" style="margin-bottom:8px">Your deposit does NOT add cash until Admin approves. It appears in Admin Company tab instantly.</div><input id="depAmt" class="input" type="number" placeholder="Amount e.g 10000"><select id="depMethod" class="input"><option>M-Pesa to 0741097779</option><option>Cash to CEO</option></select><input id="depRef" class="input" placeholder="M-Pesa Code"><button class="btn btn-orange" style="width:100%;padding:14px" onclick="requestDeposit()">Request Deposit — Send to Admin</button><div id="myDeposits" style="margin-top:12px"></div></div>
+<div class="card" style="border:2px solid #ff4757"><h3>Withdrawal — Goes to Admin</h3><div class="sub" style="margin-bottom:8px">Withdrawal request goes to Admin. Cash deducted only when Admin approves.</div><input id="withAmt" class="input" type="number" placeholder="Amount"><input id="withPhone" class="input" placeholder="Your M-Pesa number"><button class="btn btn-ghost" style="width:100%;border-color:var(--red);color:var(--red);padding:14px" onclick="requestWithdrawal()">Request Withdrawal — Send to Admin</button><div id="myWithdrawals" style="margin-top:12px"></div></div>
 </div>
 </div>
-
-<div id="tab-news" class="tab hidden"><div class="card"><h3>📰 KES OIL NEWS 🛢️</h3><div id="adminNewsBox" class="hidden card" style="background:var(--card2);border:1px dashed var(--orange)"><div class="sub" style="color:var(--orange)">ADMIN ONLY - Publish News</div><input id="newsTitle" class="input" placeholder="Headline e.g KES OIL Update"><input id="newsBody" class="input" placeholder="Details..."><button class="btn btn-orange" style="width:100%" onclick="publishNews()">📢 PUBLISH</button></div><div id="newsList"></div></div></div>
-<div id="tab-charts" class="tab hidden"><div class="card"><h3>📈 KES OIL FULL CHART 🛢️ <button class="btn btn-ghost" style="padding:6px;font-size:10px" onclick="resetCandles()">Reset Chart</button></h3><canvas id="fullCandleCanvas" height="420"></canvas></div></div>
+<div id="tab-news" class="tab hidden"><div class="card"><h3>KES Oil News</h3><div id="adminNewsBox" class="hidden card" style="background:var(--card2);border:1px dashed var(--orange)"><div class="sub" style="color:var(--orange)">Admin Only — Publish News — Impacts Equitify Analysis + Fear</div><input id="newsTitle" class="input" placeholder="Headline e.g KES OIL Update"><input id="newsBody" class="input" placeholder="Details..."><button class="btn btn-orange" style="width:100%" onclick="publishNews()">Publish — Impacts Market</button></div><div id="newsList"></div></div></div>
+<div id="tab-charts" class="tab hidden"><div class="card"><h3>KES Oil Full Chart — TradingView Style <button class="btn btn-ghost" style="padding:6px;font-size:10px" onclick="resetCandles()">Reset Chart</button></h3><div class="tv-wrap"><div class="tv-toolbar"><button class="tv-btn active" onclick="setTVRange('all',this)">All</button><button class="tv-btn" onclick="setTVRange(30,this)">30 Candles</button><button class="tv-btn" onclick="setTVRange(15,this)">15 Candles</button><button class="tv-btn" onclick="tvZoom(-1)">− Zoom Out</button><button class="tv-btn" onclick="tvZoom(1)">+ Zoom In</button><button class="tv-btn" onclick="tvReset()">Reset View</button><span class="tv-ohlc" id="tvOhlcFull">O — • H — • L — • C —</span></div><canvas id="fullCandleCanvas" class="tv-canvas" height="420"></canvas><div class="tv-hint">Drag to scroll through history • Scroll / Pinch to zoom • Hover / Tap any candle to review its OHLC • Bid/Ask hidden — clean candles only</div></div></div></div>
 <div id="tab-company" class="tab hidden">
 <div class="grid">
-<div class="card" style="border-color:var(--orange)"><h3>⚙️ COMPANY PROFIT / LOSS - CEO ONLY</h3><div class="row"><span>Total P/L</span><b id="totComp">0</b></div><div class="row"><span>Reinvested 50%</span><b id="totReinvest">0</b></div><div class="row"><span>Hidden Pool 🛢️</span><b id="hidPool" style="color:var(--orange)">0</b></div><input id="compProfitInput" class="input" type="number" placeholder="1000000 profit or -800000 loss"><button class="btn btn-orange" style="width:100%" onclick="setCompanyProfit()">SPLIT & MOVE KES OIL PRICE</button><button class="btn btn-ghost" style="width:100%;margin-top:8px" onclick="resetAllZero()">🔄 RESET ALL TO ZERO</button></div>
-<div><div class="card" style="border:2px solid #00d395"><h3>📥 Deposits - Approve Here - CEO</h3><div id="adminDeposits"></div></div><div class="card" style="margin-top:16px;border:2px solid #ff4757"><h3>📤 Withdrawals - Approve Here - CEO</h3><div id="adminWithdrawals"></div></div><div class="card" style="margin-top:16px"><h3>🔒 Edit Names & PINs</h3><div id="adminSetup"></div><button class="btn btn-ghost" style="width:100%;margin-top:8px" onclick="saveMembers()">Save Changes</button></div></div>
+<div class="card" style="border-color:var(--orange)"><h3>Company Profit / Loss — CEO Only</h3><div class="row"><span>Total P/L</span><b id="totComp">0</b></div><div class="row"><span>Reinvested 50%</span><b id="totReinvest">0</b></div><div class="row"><span>Hidden Pool</span><b id="hidPool" style="color:var(--orange)">0</b></div><input id="compProfitInput" class="input" type="number" placeholder="1000000 profit or -800000 loss"><button class="btn btn-orange" style="width:100%" onclick="setCompanyProfit()">Split & Move KES Oil Price — Impacts All</button><button class="btn btn-ghost" style="width:100%;margin-top:8px" onclick="resetAllZero()">Reset All to Zero</button></div>
+<div><div class="card" style="border:2px solid #00d395"><h3>Deposits — Approve Here — CEO</h3><div class="sub">Every member deposit appears here. Cash added ONLY when you click Approve.</div><div id="adminDeposits"></div></div><div class="card" style="margin-top:16px;border:2px solid #ff4757"><h3>Withdrawals — Approve Here — CEO</h3><div class="sub">Every withdrawal appears here. Cash deducted ONLY on Approve.</div><div id="adminWithdrawals"></div></div><div class="card" style="margin-top:16px"><h3>Edit Names & PINs</h3><div id="adminSetup"></div><button class="btn btn-ghost" style="width:100%;margin-top:8px" onclick="saveMembers()">Save Changes</button></div></div>
 </div>
 </div>
-<div id="tab-div" class="tab hidden"><div class="card"><h3>💸 DIVIDENDS - CEO ONLY</h3><div class="row"><span>Hidden Pool 🛢️</span><b id="hidPool2" style="color:var(--orange)">0</b></div><button class="btn btn-blue" style="width:100%;margin-top:10px;padding:14px" onclick="triggerDividends()">💸 TRIGGER DIVIDENDS - Distribute to Available Balance</button><div class="row" style="margin-top:10px"><span>Last Payout</span><span id="lastDiv" class="sub">None yet</span></div><div class="sub" style="margin-top:8px;color:#8b93a7">Dividends are distributed proportionally to KES OIL shares and instantly credited to each member's Available Balance in Finance tab.</div><div id="ledger" class="sub" style="margin-top:12px;max-height:300px;overflow:auto"></div></div></div>
-
+<div id="tab-div" class="tab hidden"><div class="card"><h3>Dividends — CEO Only</h3><div class="row"><span>Hidden Pool</span><b id="hidPool2" style="color:var(--orange)">0</b></div><button class="btn btn-blue" style="width:100%;margin-top:10px;padding:14px" onclick="triggerDividends()">Trigger Dividends — Distribute to Available Balance</button><div class="row" style="margin-top:10px"><span>Last Payout</span><span id="lastDiv" class="sub">None yet</span></div><div class="sub" style="margin-top:8px;color:#8b93a7">Dividends distributed proportionally to KES OIL shares and instantly credited to Available Balance.</div><div id="ledger" class="sub" style="margin-top:12px;max-height:300px;overflow:auto"></div></div></div>
+<div id="tab-equitify" class="tab hidden">
+  <div class="card" style="border:2px solid #FFD700">
+    <h3 style="color:#FFD700">Equitify Inc — Institutional — Start 1000 — Auto Profit</h3>
+    <div class="sub" style="font-family:'Cormorant Garamond',serif;font-size:16px">Start: KES 1000. Equity = Cash + Shares × Mid. Live P/L = Shares × (Mid − Avg). When market moves, Equitify profit moves too. Research → Risk → Treasury → Committee → Admin Confirm.</div>
+    <div class="finance-grid" style="margin-top:14px">
+      <div class="f-box gold"><label>Starting Balance</label><b id="eqStartBalDisplay">KES 1,000.00</b><div class="sub">Editable below — Default 1000</div></div>
+      <div class="f-box gold"><label>Available Balance (Cash)</label><b id="eqCash">KES 1,000.00</b><div class="sub">Cash after fills</div></div>
+      <div class="f-box"><label>Shares Held</label><b id="eqSharesHeld">0</b><div class="sub" id="eqSharePct">0% of market</div></div>
+      <div class="f-box" id="eqLiveBox"><label>Live P/L (Auto from Market)</label><b id="eqLivePL" style="color:#00d395">KES 0.00</b><div class="sub" id="eqLivePLPct">0.00% — Auto when Mid moves</div></div>
+      <div class="f-box"><label>Realized P/L</label><b id="eqIncome" style="color:#00d395">KES 0.00</b><div class="sub">From Admin-filled orders</div></div>
+      <div class="f-box gold"><label>Total Equity</label><b id="eqEquity" style="color:#FFD700">KES 1,000.00</b><div class="sub" id="eqEquityNote">Start 1000 + Profit</div></div>
+      <div class="f-box"><label>Phase</label><b id="eqPhase">ACCUMULATION</b><div class="sub" id="eqSignal">Buy Zone</div></div>
+      <div class="f-box"><label>Day Move Used</label><b id="eqMoveUsed">0.00%</b><div class="sub">Limit 15%</div></div>
+      <div class="f-box"><label>Daily Loss Used</label><b id="eqLossUsed">KES 0</b><div class="sub">Limit 5% of start</div></div>
+    </div>
+    <div class="card" style="border:2px solid #00d395;margin-top:14px">
+      <h3 style="color:#00d395">Equitify Rates — Synced to Market — Lively</h3>
+      <div class="sub">No separate price. Same rate as family market. When family buys/sells, Equitify rates + profit update instantly. Bid/Ask shown here as numbers only, NOT on chart.</div>
+      <div class="finance-grid" style="margin-top:12px">
+        <div class="f-box gold"><label>Mid Price</label><b id="eqRateMid">KES 0.00</b><div class="sub">Same as family chart</div></div>
+        <div class="f-box"><label>Bid (Sell)</label><b id="eqRateBid" style="color:#ff4757">KES 0.00</b><div class="sub">Mid − 2.00</div></div>
+        <div class="f-box"><label>Ask (Buy)</label><b id="eqRateAsk" style="color:#00d395">KES 0.00</b><div class="sub">Mid + 2.00</div></div>
+        <div class="f-box"><label>Spread</label><b id="eqRateSpread">4.00</b><div class="sub">Ask − Bid</div></div>
+        <div class="f-box"><label>Fear Index</label><b id="eqRateFear">0</b><div class="sub" id="eqRateFearText">Calm</div></div>
+        <div class="f-box"><label>Last Update</label><b id="eqRateTime">-</b><div class="sub">Synced to db.mid</div></div>
+      </div>
+    </div>
+    <div class="card" style="border:2px solid #3b82f6;margin-top:14px">
+      <h3 style="color:#60a5fa">Equitify Research — Fundamental + News Analysis</h3>
+      <div class="sub">Analysis reads YOUR News + Company Fundamentals + Market. When you publish News or Company Profit, this updates.</div>
+      <div id="eqAnalysis" class="sub" style="margin-top:10px;line-height:1.9;font-size:13px">Analysing...</div>
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+        <button class="btn btn-blue" onclick="generateEquitifyAnalysis()">Refresh Analysis</button>
+        <button class="btn btn-orange" onclick="useAnalysisForProposal()">Use Analysis to Fill Proposal</button>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:16px">
+      <div>
+        <h3>1. Research & Analyst — Create Proposal</h3>
+        <label style="font-size:11px;color:var(--muted)">Decision</label>
+        <select id="eqMode" class="input">
+          <option value="ACCUMULATION">ACCUMULATION — Keep price low, create Buy opportunity</option>
+          <option value="SHAKEOUT">SHAKEOUT — Quick dip, last cheap buy</option>
+          <option value="MARKUP">MARKUP — Push price up, create Sell opportunity</option>
+          <option value="DISTRIBUTION">DISTRIBUTION — Sell slowly, take profit</option>
+        </select>
+        <label style="font-size:11px;color:var(--muted)">Shares</label>
+        <input id="eqQty" class="input" type="number" value="2">
+        <label style="font-size:11px;color:var(--muted)">Analyst Reason</label>
+        <input id="eqReason" class="input" placeholder="e.g Fear is low, family is holding, time to markup">
+        <button class="btn btn-orange" style="width:100%;padding:14px" onclick="createEquitifyProposal()">Submit Proposal to Risk</button>
+      </div>
+      <div>
+        <h3>Departments + Starting Balance = 1000</h3>
+        <div class="sub" style="line-height:2">
+          <b>Research:</b> Proposes trade + reason<br>
+          <b>Risk:</b> Checks max move 15% / max loss 5% of 1000 = 50<br>
+          <b>Treasury:</b> Checks cash / shares (Start 1000)<br>
+          <b>Committee:</b> Final institutional approval<br>
+          <b>Admin:</b> Final Confirm & Fill — only then price moves + profit updates
+        </div>
+        <label style="font-size:11px;color:var(--muted)">Equitify Starting Balance — Editable — Default 1000</label>
+        <input id="eqStartBalInput" class="input" type="number" value="1000" placeholder="e.g 1000">
+        <button class="btn btn-orange" style="width:100%;padding:12px;margin-bottom:8px" onclick="saveEquitifyStartingBalance()">Save Starting Balance — Impacts Equity</button>
+        <div class="sub" id="eqStartBalNote" style="margin-bottom:8px">Current: KES 1,000.00 • Start 1000</div>
+        <label style="font-size:11px;color:var(--muted)">Risk Settings</label>
+        <input id="eqMaxMove" class="input" type="number" value="15">
+        <input id="eqMaxLossPct" class="input" type="number" value="5">
+        <input id="eqCapitalInput" class="input" type="number" value="1000" disabled style="display:none">
+        <button class="btn btn-ghost" style="width:100%;margin-top:8px" onclick="resetEquitifyDay()">Reset Day Counters</button>
+        <div id="eqDecisionOut" class="sub" style="margin-top:10px;line-height:1.8"></div>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px;border:2px solid #FFD700">
+    <h3>Equitify Institutional Proposals — Workflow — Lively</h3>
+    <div class="sub">Research → Risk → Treasury → Committee → Admin. Price + Equitify Profit + Family P/L + Chart all update on Admin Fill.</div>
+    <div id="eqPending" style="margin-top:10px"></div>
+  </div>
+  <div class="card" style="margin-top:16px"><h3>Equitify Internal Decision Log</h3><div id="eqLog" class="sub" style="max-height:200px;overflow:auto"></div></div>
+</div>
+<div id="tab-chat" class="tab hidden">
+  <div class="card">
+    <h3>Members Chat — KES OIL Family</h3>
+    <div class="sub">Only 8 members + CEO. Be respectful. Admin can delete any message. Live — appears to all members instantly.</div>
+    <div id="chatBox" style="height:360px;overflow-y:auto;background:#0c1126;border:1px solid var(--border);border-radius:14px;padding:12px;margin-top:12px;display:flex;flex-direction:column;gap:8px"></div>
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <input id="chatInput" class="input" placeholder="Type message... e.g When are dividends?" style="margin:0" onkeydown="if(event.key==='Enter') sendChat()">
+      <button class="btn btn-buy" style="min-width:92px" onclick="sendChat()">Send</button>
+    </div>
+    <div class="sub" style="margin-top:6px">Live — Message appears to all members instantly. No lag. Press Enter to send.</div>
+  </div>
+</div>
 <div id="tab-faq" class="tab hidden">
-
-<div class="card" style="border:1px solid #00d395;background:linear-gradient(135deg,#11162a 0%,#0f241c 100%)">
-<div class="legitTitle" style="color:#00d395">🎯 OUR AIM - BUILDING WEALTH FROM KISUMU</div>
-<div class="legitText">
-At KES INC TRADING PLC, our aim is clear and legitimate: to democratize ownership of oil wealth for ordinary Kenyans.
-<br><br>
-For too long, oil trading has been reserved for large corporations and foreign entities. While Kenyans consume fuel daily, they have never had the opportunity to own and trade oil as an asset. KES OIL was created to change that narrative.
-<br><br>
-<b style="color:#00d395">We aim to:</b><br>
-• Provide a transparent, secure, and private trading ecosystem for our 8 founding members to learn, trade, and grow together.<br>
-• Instill financial discipline, investment literacy, and long-term wealth creation mindset within our community.<br>
-• Create a platform where every transaction is tracked live, every deposit is verified via M-Pesa 0741097779, and every member's portfolio is visible in real-time.<br>
-• Prove that disciplined small investors from Kisumu can build institutional-grade trading discipline and eventually own real-world oil assets.
-<br><br>
-This is not a get-rich-quick scheme. This is a structured, long-term investment education and wealth-building platform.
+<div class="card" style="border:1px solid #00d395">
+<div class="legitTitle" style="color:#00d395">Our Aim — Building Wealth From Kisumu</div>
+<div class="legitText">At KES INC TRADING PLC, our aim is to democratize ownership of oil wealth for ordinary Kenyans. This is a structured, long-term investment education and wealth-building platform for our 8 founding members.</div>
+</div>
+<div class="card" style="border:1px solid #f59e0b">
+<div class="legitTitle" style="color:#f59e0b">Important Disclosures & Risk Information</div>
+<div class="legitText" style="font-size:14px">• KES INC TRADING PLC is a private members-only investment education platform, currently operating as a closed community of 8 founding members. It is not currently licensed by the Capital Markets Authority (CMA) of Kenya as a public exchange. Participation is at member's own discretion.<br>• Trading involves risk. Members are advised to trade responsibly.<br>• Based in Kisumu, Kenya. All operational decisions are made by CEO DEDAN ONYANGO.</div>
 </div>
 </div>
-
-<div class="card" style="border:1px solid #FFD700;background:linear-gradient(135deg,#1a1600 0%,#201a00 100%)">
-<div class="legitTitle" style="color:#FFD700">🚀 OUR AMBITION - FROM 224 KES TO A REAL OIL EMPIRE</div>
-<div class="legitText">
-Our ambition is bold, realistic, and grounded in a phased growth strategy:
-<br><br>
-<b>Phase 1 - Foundation (Current):</b> Establish KES OIL at 224 KES (Bid 222 / Ask 226), build trading discipline among 8 members, create live tracking of deposits, withdrawals, P/L, and equity. Every member starts with zero until verified deposit.
-<br><br>
-<b>Phase 2 - Growth:</b> Grow KES OIL value through legitimate company profits. 50% of all real company profits are reinvested into the hidden pool, which directly moves the KES OIL price upward. Buying pressure from members also appreciates the price, mirroring real markets.
-<br><br>
-<b>Phase 3 - Asset-Backed Expansion:</b> Link KES OIL to tangible assets in Kisumu County — including partnership with fuel stations, investment in fuel transportation, and bulk fuel supply opportunities. Our leaderboard will determine who qualifies for real-world business funding.
-<br><br>
-<b>Phase 4 - Community Wealth:</b> Transition top-ranked members (based on P/L and % deviation) into owners of physical fuel businesses. KES OIL dividends will be funded from real profits, creating sustainable passive income.
-<br><br>
-<b>Our Long-Term Vision:</b> To become a case study in Kenya that 8 disciplined investors from Kisumu built a multi-million shilling oil trading community from scratch, starting at 224 KES, with transparency and integrity.
-</div>
-</div>
-
-<div class="card" style="border:1px solid #3b82f6;background:linear-gradient(135deg,#0a142a 0%,#11162a 100%)">
-<div class="legitTitle" style="color:#60a5fa">💡 OUR PURPOSE - WHY YOU SHOULD INVEST WITH KES OIL</div>
-<div class="legitText">
-<b>Why KES OIL is a legitimate investment opportunity for our members:</b>
-<br><br>
-<b>1. Full Transparency:</b> Your Available Balance, Total Deposited, Total Withdrawn, Shares Owned, Live P/L, and Equity are all calculated live and visible. No hidden charges. All deposits via official M-Pesa 0741097779 are peer-verified by CEO DEDAN ONYANGO.
-<br><br>
-<b>2. Real Market Mechanics:</b> KES OIL operates like real markets — BUY orders push price up, SELL orders and large withdrawals create temporary dips (fear multiplier), company profits push price up sustainably. You learn real trading psychology in a controlled, private environment.
-<br><br>
-<b>3. Ownership and Accountability:</b> 8 members own 100% of KES OIL. No external investors can dilute you. Your rank on the leaderboard is based purely on your trading performance — Live P/L and percentage deviation — not on who joined first.
-<br><br>
-<b>4. Dividend Income:</b> When the company makes real profit, 50% is held in a hidden pool and distributed as dividends proportional to your KES OIL shareholding. Dividends are credited directly to your Available Balance — instantly increasing your withdrawable cash.
-<br><br>
-<b>5. Financial Education:</b> This platform teaches you candlestick charts, bid/ask spreads, portfolio management, risk management, and emotional discipline — skills you can use in NSE, forex, or global oil markets.
-<br><br>
-<b style="color:#60a5fa">This is an investment in knowledge, discipline, and community ownership. Early members who understand compounding and hold long-term will benefit the most.</b>
-</div>
-</div>
-
-<div class="card" style="border:1px solid #f59e0b;background:linear-gradient(135deg,#2a1a00 0%,#11162a 100%)">
-<div class="legitTitle" style="color:#f59e0b">⚠️ IMPORTANT DISCLOSURES & RISK INFORMATION</div>
-<div class="legitText" style="font-size:12px">
-• KES INC TRADING PLC is a private members-only investment education platform, currently operating as a closed community of 8 founding members. It is not currently licensed by the Capital Markets Authority (CMA) of Kenya as a public exchange. Participation is at member's own discretion.<br>
-• KES OIL is a synthetic community asset that tracks internal trading activity and company performance. While it mimics real oil market behavior, it is not directly pegged to international crude oil prices (Brent/WTI).<br>
-• All deposits are peer-to-peer via M-Pesa to 0741097779 and verified by CEO DEDAN ONYANGO. A 1% facilitation fee is allocated to company operational growth.<br>
-• Trading involves risk. Large sell orders will depress KES OIL price due to the fear multiplier, similar to real market slippage. Members are advised to trade responsibly.<br>
-• Dividends are not guaranteed and are triggered by the CEO based on availability of hidden pool from real company profits. There is no fixed dividend schedule.<br>
-• Withdrawals are processed by CEO approval and may cause short-term price adjustment. Members should plan withdrawals prudently.<br>
-• Based in Kisumu, Kenya. All operational decisions are made by CEO DEDAN ONYANGO and founding members. PINs and platform link should remain confidential within the trust circle.<br>
-• This platform was custom-built for financial inclusion and education purposes.
-</div>
-</div>
-</div>
-
 <div id="tab-about" class="tab hidden">
-<div class="card" style="border:1px solid #FFD700;background:radial-gradient(ellipse at center, #1a1600 0%, #11162a 70%)">
-<h3 style="color:#FFD700">🏢 ABOUT KES INC TRADING PLC</h3>
+<div class="card" style="border:1px solid #FFD700">
+<h3 style="color:#FFD700">About KES Inc Trading PLC</h3>
 <div style="margin-top:14px;line-height:2;font-size:13px;color:#e8ecf6">
-<div style="font-size:28px;font-weight:900;background:linear-gradient(180deg, #FFD700 0%, #FFA500 100%);-webkit-background-clip:text;background-clip:text;color:transparent">🛢️ KES OIL TRADING PLC 🛢️</div>
-
+<div style="font-size:30px;font-weight:900;font-family:'Playfair Display',serif;color:#FFD700">KES OIL TRADING PLC</div>
+<div class="font-elegant" style="font-size:20px;color:#e8c97a">Excellence • Trust • Growth</div>
 <div style="margin-top:12px;padding:14px;background:#0c1126;border-radius:14px;border:1px solid #242d4d">
 <div><b style="color:#FFD700">Legal Name:</b> KES INC TRADING PLC</div>
 <div><b style="color:#FFD700">Trading Asset:</b> KES OIL — Synthetic Crude Oil Asset</div>
-<div><b style="color:#60a5fa">Headquarters:</b> Kisumu City, Kenya — Lakeside Business District, Near Lake Victoria</div>
+<div><b style="color:#60a5fa">Headquarters:</b> Kisumu City, Kenya</div>
 <div><b style="color:#00d395">Founded:</b> 11th November 2026</div>
 <div><b style="color:#f59e0b">Founder & CEO:</b> DEDAN ONYANGO</div>
-<div><b style="color:#e8ecf6">Membership:</b> 8 Founding Members — Private, Invite-Only Community</div>
-<div><b style="color:#8b93a7">Starting Price:</b> KES OIL 224.00 KES (Bid: 222.00 / Ask: 226.00 / Spread: 4.00 KES)</div>
-<div><b style="color:#8b93a7">Platform:</b> Bloomberg-style Wide Trading Floor • Live Green/Red Candlestick Charts • Firebase Real-Time Database • Netlify Hosting</div>
-<div><b style="color:#8b93a7">Official M-Pesa:</b> 0741097779 — All deposits and withdrawals verified by CEO</div>
-</div>
-
-<div style="margin-top:14px;padding:14px;background:linear-gradient(135deg,#1a1600 0%,#0c1126 100%);border-radius:14px;border-left:4px solid #FFD700">
-<b style="color:#FFD700;font-size:14px">A Message from the CEO — DEDAN ONYANGO</b><br><br>
-<span style="color:#e8ecf6">
-"My name is DEDAN ONYANGO, and I built KES INC TRADING PLC from scratch in Kisumu with one conviction: our community deserves to own the resources we use every day.
-<br><br>
-I grew up watching fuel prices rise while oil wealth left our country. I asked myself — why do we only consume oil, but never own it? KES OIL is my answer to that question.
-<br><br>
-This platform was hand-coded line by line — every chart, every calculation, every deposit flow — to give our 8 founding members a legitimate, transparent, and professional trading experience without relying on banks or external brokers. I chose Kisumu as our headquarters because this is where our story begins — the lakeside city with big dreams.
-<br><br>
-My commitment to you is simple: I will manage this platform with integrity, verify every shilling deposited via M-Pesa 0741097779, ensure every dividend is distributed fairly based on your shareholding, and work tirelessly to link KES OIL to real-world fuel businesses in Kisumu.
-<br><br>
-We are starting small — 224 KES — but we are thinking big. From a private trading floor in Kisumu to fuel stations across Kenya. This is not just an app; this is our wealth movement.
-<br><br>
-Karibu sana to KES OIL. Let's build wealth together, with discipline, transparency, and purpose."
-</span><br><br>
-<span style="font-size:11px;color:#8b93a7">— DEDAN ONYANGO, Founder & CEO, KES INC TRADING PLC, Kisumu, Kenya | Contact: M-Pesa 0741097779</span>
-</div>
-
-<div style="margin-top:14px;font-size:12px;color:#8b93a7;line-height:1.9">
-<b style="color:#e8ecf6">Technical Details:</b><br>
-Built using modern web technologies with Firebase Realtime Database (kescorp project) for live synchronization across all 8 members. Every trade, deposit approval, dividend trigger, and price movement is instantly reflected on all devices. The platform features real-time candlestick charting with OHLC data, fear index for market psychology simulation, bid/ask spread mechanics, and a comprehensive finance dashboard tracking Available Balance, Total Deposited, Total Withdrawn, Shares Owned, Live P/L, and Equity (Balance + P/L). Hosted securely on Netlify. Designed to feel like Nairobi Securities Exchange (NSE) and Bloomberg Terminal, but customized for our community's oil asset. Kisumu is our base, but our vision is national.
+<div><b style="color:#e8ecf6">Membership:</b> 8 Founding Members — Private, Invite-Only Community + Equitify Investor (Start 1000)</div>
+<div><b style="color:#8b93a7">Starting Price:</b> KES OIL 224.00 KES (Bid: 222.00 / Ask: 226.00)</div>
+<div><b style="color:#8b93a7">Official M-Pesa:</b> 0741097779</div>
 </div>
 </div>
 </div>
@@ -277,21 +338,49 @@ const fbApp = initializeApp(firebaseConfig);
 const dRef = getDatabase(fbApp);
 const rootRef = ref(dRef, 'kesinc_live_v6_legit_final');
 let defaultMembers=[{name:"ADMIN - DEDAN ONYANGO CEO",pin:"0000"},{name:"Member 1",pin:"1111"},{name:"Member 2",pin:"2222"},{name:"Member 3",pin:"3333"},{name:"Member 4",pin:"4444"},{name:"Member 5",pin:"5555"},{name:"Member 6",pin:"6666"},{name:"Member 7",pin:"7777"}];
-let db={members:defaultMembers,accounts:{},mid:224,totComp:0,totReinvest:0,hidden:0,news:[],ledger:[],deposits:[],withdrawals:[],candles:[],fear:0};
+let db={members:defaultMembers,accounts:{},mid:224,totComp:0,totReinvest:0,hidden:0,news:[],ledger:[],deposits:[],withdrawals:[],candles:[],fear:0, chat:[], equitify:{phase:'ACCUMULATION',dayOpen:224,moveUsed:0,proposals:[],startCash:1000,log:["EQUITIFY INC - Start 1000 - Institutional - NO AUTO"]}};
 let current=null, isSyncing=false;
-
+let saveTimer=null, pendingSave=false;
+function saveFast(){ pendingSave=true; window.lastLocalSave=Date.now(); if(saveTimer) clearTimeout(saveTimer); saveTimer=setTimeout(()=>{ if(!pendingSave) return; pendingSave=false; isSyncing=true; set(rootRef, db).then(()=>{isSyncing=false;}).catch(()=>{isSyncing=false;}); }, 350); }
+let chartRAF=null;
+function drawChartsThrottled(){ if(chartRAF) return; chartRAF=requestAnimationFrame(()=>{ chartRAF=null; try{drawCandles('candleCanvas');}catch(e){} try{ if(!document.getElementById('tab-charts').classList.contains('hidden')) drawCandles('fullCandleCanvas'); }catch(e){} }); }
+function livelyUpdate(){ try{ updateEquitifyLiveProfit(); }catch(e){} renderAllInstant(); drawChartsThrottled(); }
+function updateEquitifyLiveProfit(){ if(!db.accounts[8]) return; let acc=db.accounts[8]; let start=db.equitify?.startCash||1000; let livePL = acc.shares>0 ? acc.shares*(db.mid - (acc.avg||0)) : 0; let equity = acc.bal + acc.shares*db.mid; db.equitify.livePL = livePL; db.equitify.equity = equity; db.equitify.totalProfit = (acc.realizedPL||0) + livePL; db.equitify.lossUsed = Math.max(0, start - equity); }
+let tvState={offset:0, visible:30, hover:-1, crossX:-1, crossY:-1, dragging:false, dragStartX:0, dragStartOffset:0};
+window.tvZoom=function(dir){ if(dir>0) tvState.visible=Math.max(8, tvState.visible-4); else tvState.visible=Math.min(80, tvState.visible+6); drawChartsThrottled(); };
+window.tvReset=function(){ tvState.offset=0; tvState.visible=30; tvState.hover=-1; drawChartsThrottled(); };
+window.setTVRange=function(n,btn){ document.querySelectorAll('.tv-btn').forEach(b=>{ if(b.textContent.includes('Candles')||b.textContent==='All') b.classList.remove('active'); }); if(btn) btn.classList.add('active'); if(n==='all'){ tvState.visible=Math.max(30, db.candles.length); tvState.offset=0; } else { tvState.visible=n; tvState.offset=0; } drawChartsThrottled(); };
+function attachTVEvents(){
+  ['candleCanvas','fullCandleCanvas'].forEach(id=>{
+    let c=document.getElementById(id); if(!c||c.dataset.tvAttached) return; c.dataset.tvAttached='1';
+    c.addEventListener('wheel', e=>{ e.preventDefault(); if(e.deltaY<0) tvState.visible=Math.max(8, tvState.visible-2); else tvState.visible=Math.min(90, tvState.visible+2); drawChartsThrottled(); }, {passive:false});
+    c.addEventListener('mousedown', e=>{ tvState.dragging=true; tvState.dragStartX=e.clientX; tvState.dragStartOffset=tvState.offset; tvState.crossX=e.offsetX; });
+    window.addEventListener('mousemove', e=>{ if(!tvState.dragging) return; let rect=c.getBoundingClientRect(); if(e.clientX<rect.left||e.clientX>rect.right) return; let dx=e.clientX - tvState.dragStartX; let perPx = tvState.visible / (rect.width-110); tvState.offset=Math.max(0, Math.min(Math.max(0, db.candles.length - tvState.visible), tvState.dragStartOffset - Math.round(dx * perPx * 0.6))); drawChartsThrottled(); });
+    window.addEventListener('mouseup', ()=>{ tvState.dragging=false; });
+    c.addEventListener('mousemove', e=>{ let rect=c.getBoundingClientRect(); tvState.crossX=e.clientX-rect.left; tvState.crossY=e.clientY-rect.top; let pl=52, pr=70, cw=rect.width-pl-pr; let idx=Math.floor((tvState.crossX-pl) / (cw / tvState.visible)); let total=db.candles.length; let start=Math.max(0, total - tvState.visible - tvState.offset); tvState.hover = start + idx; if(tvState.hover<0||tvState.hover>=total) tvState.hover=-1; drawChartsThrottled(); });
+    c.addEventListener('mouseleave', ()=>{ tvState.hover=-1; tvState.crossX=-1; drawChartsThrottled(); });
+    c.addEventListener('touchstart', e=>{ tvState.dragging=true; tvState.dragStartX=e.touches[0].clientX; tvState.dragStartOffset=tvState.offset; }, {passive:true});
+    c.addEventListener('touchmove', e=>{ if(!tvState.dragging) return; let rect=c.getBoundingClientRect(); let dx=e.touches[0].clientX - tvState.dragStartX; let perPx = tvState.visible / (rect.width-110); tvState.offset=Math.max(0, Math.min(Math.max(0, db.candles.length - tvState.visible), tvState.dragStartOffset - Math.round(dx * perPx * 0.6))); let touch=e.touches[0]; tvState.crossX=touch.clientX-rect.left; tvState.crossY=touch.clientY-rect.top; let idx=Math.floor((tvState.crossX-52)/((rect.width-122)/tvState.visible)); let start=Math.max(0, db.candles.length - tvState.visible - tvState.offset); tvState.hover=start+idx; drawChartsThrottled(); }, {passive:true});
+    c.addEventListener('touchend', ()=>{ tvState.dragging=false; });
+    c.addEventListener('click', e=>{ let rect=c.getBoundingClientRect(); let x=e.clientX-rect.left; let idx=Math.floor((x-52)/((rect.width-122)/tvState.visible)); let start=Math.max(0, db.candles.length - tvState.visible - tvState.offset); let h=start+idx; if(h>=0&&h<db.candles.length){ tvState.hover=h; drawChartsThrottled(); } });
+  });
+}
+window.setTheme=(t)=>{document.documentElement.setAttribute('data-theme',t); localStorage.setItem('kes_theme',t); document.getElementById('themeSelect').value=t;};
+let savedTheme=localStorage.getItem('kes_theme')||'midnight'; document.documentElement.setAttribute('data-theme',savedTheme); setTimeout(()=>{let s=document.getElementById('themeSelect'); if(s) s.value=savedTheme;},100);
 async function init(){
   const snap=await get(rootRef);
   if(!snap.exists()){
     db.accounts={}; db.members.forEach((m,i)=>{db.accounts[i]={bal:0,shares:0,avg:0,totDep:0,totWith:0,realizedPL:0}});
+    db.accounts[8]={bal:1000,shares:0,avg:0,totDep:0,totWith:0,realizedPL:0};
     let price=224; let base=new Date(2026,10,11);
     db.candles=[]; for(let i=29;i>=0;i--){let d=new Date(base); d.setDate(base.getDate()-i); let open=price; let ch=(Math.random()-0.48)*1.8; let close=Math.max(1,open+ch); let high=Math.max(open,close)+Math.random()*1.2; let low=Math.min(open,close)-Math.random()*1.2; low=Math.max(1,low); db.candles.push({t:d.getTime(),o:open,h:high,l:low,c:close}); price=close;} db.mid=price;
-    db.ledger=["KES OIL PLC - Built by DEDAN ONYANGO CEO - Kisumu - Live Finance System"];
+    db.ledger=["KES OIL PLC - Built by DEDAN ONYANGO CEO - Kisumu - Equitify Start 1000"];
     await set(rootRef, db);
   }
   onValue(rootRef, s=>{
     if(!s.exists()) return;
     if(isSyncing) return;
+    if(window.lastLocalSave && Date.now()-window.lastLocalSave < 600) return;
     db=s.val();
     if(!db.accounts) db.accounts={};
     if(!db.deposits) db.deposits=[];
@@ -299,27 +388,32 @@ async function init(){
     if(!db.news) db.news=[];
     if(!db.ledger) db.ledger=[];
     if(!db.candles) db.candles=[];
+    if(!db.chat) db.chat=[];
+    if(!db.equitify) db.equitify={phase:'ACCUMULATION',dayOpen:db.mid,moveUsed:0,proposals:[],startCash:1000,log:[]};
+    if(!db.equitify.proposals) db.equitify.proposals=[];
+    if(db.equitify.startCash===undefined) db.equitify.startCash=1000;
     Object.keys(db.accounts).forEach(k=>{if(db.accounts[k].realizedPL===undefined) db.accounts[k].realizedPL=0;});
     renderMembers();
-    if(current!==null) renderAll();
+    if(current!==null) livelyUpdate();
     document.getElementById('fbStatus').textContent='● Live';
   });
 }
-function saveFast(){isSyncing=true; set(rootRef, db).then(()=>{isSyncing=false;}).catch(()=>{isSyncing=false;});}
 function fmt(n){return 'KES '+Number(n).toLocaleString('en-KE',{minimumFractionDigits:2,maximumFractionDigits:2})}
-function renderMembers(){let sel=document.getElementById('memberSelect'); if(sel) sel.innerHTML=db.members.map((m,i)=>`<option value="${i}">${i+1}. ${m.name}</option>`).join(''); let setup=document.getElementById('adminSetup'); if(setup) setup.innerHTML=db.members.map((m,i)=>`<div class="grid2"><input id="mname_${i}" value="${m.name}"><input id="mpin_${i}" type="password" value="${m.pin}"></div>`).join('');}
-window.saveMembers=()=>{if(current!==0)return; let newM=[]; for(let i=0;i<8;i++){let n=document.getElementById(`mname_${i}`).value.trim(); let p=document.getElementById(`mpin_${i}`).value.trim(); newM.push({name:n,pin:p}); if(!db.accounts[i])db.accounts[i]={bal:0,shares:0,avg:0,totDep:0,totWith:0,realizedPL:0}} db.members=newM; renderAll(); saveFast();}
-window.doLogin=()=>{let idx=parseInt(document.getElementById('memberSelect').value); let pin=document.getElementById('pinInput').value.trim(); if(db.members[idx].pin!==pin)return alert('Wrong PIN'); current=idx; document.getElementById('login').classList.add('hidden'); document.getElementById('app').classList.remove('hidden'); document.getElementById('whoBadge').textContent=db.members[idx].name+(idx===0?' (CEO)':''); document.getElementById('b-company').classList.toggle('hidden', idx!==0); document.getElementById('b-div').classList.toggle('hidden', idx!==0); document.getElementById('adminNewsBox').classList.toggle('hidden', idx!==0); renderAll();}
+function renderMembers(){let sel=document.getElementById('memberSelect'); if(sel) sel.innerHTML=db.members.slice(0,8).map((m,i)=>`<option value="${i}">${i+1}. ${m.name}</option>`).join(''); let setup=document.getElementById('adminSetup'); if(setup) setup.innerHTML=db.members.slice(0,8).map((m,i)=>`<div class="grid2"><input id="mname_${i}" value="${m.name}"><input id="mpin_${i}" type="password" value="${m.pin}"></div>`).join('');}
+window.saveMembers=()=>{if(current!==0)return; let newM=[]; for(let i=0;i<8;i++){let n=document.getElementById(`mname_${i}`).value.trim(); let p=document.getElementById(`mpin_${i}`).value.trim(); newM.push({name:n,pin:p}); if(!db.accounts[i])db.accounts[i]={bal:0,shares:0,avg:0,totDep:0,totWith:0,realizedPL:0}} db.members=newM; if(db.members[8]) db.members=db.members.slice(0,8).concat(db.members[8]); livelyUpdate(); saveFast();}
+window.doLogin=()=>{let idx=parseInt(document.getElementById('memberSelect').value); let pin=document.getElementById('pinInput').value.trim(); if(db.members[idx].pin!==pin)return alert('Wrong PIN'); current=idx; document.getElementById('login').classList.add('hidden'); document.getElementById('app').classList.remove('hidden'); document.getElementById('whoBadge').textContent=db.members[idx].name+(idx===0?' (CEO)':''); document.getElementById('b-company').classList.toggle('hidden', idx!==0); document.getElementById('b-div').classList.toggle('hidden', idx!==0); document.getElementById('b-equitify').classList.toggle('hidden', idx!==0); document.getElementById('adminNewsBox').classList.toggle('hidden', idx!==0); attachTVEvents(); livelyUpdate();}
 window.logout=()=>{current=null; document.getElementById('login').classList.remove('hidden'); document.getElementById('app').classList.add('hidden'); document.getElementById('whoBadge').textContent='Not logged'; document.getElementById('pinInput').value='';}
 window.switchTab=(t)=>{
-  if((t==='company'||t==='div')&&current!==0){alert('CEO ONLY - DEDAN ONYANGO');return;}
+  if((t==='company'||t==='div'||t==='equitify')&&current!==0){alert('CEO ONLY - DEDAN ONYANGO');return;}
   document.querySelectorAll('.tab').forEach(el=>el.classList.add('hidden'));
   document.getElementById('tab-'+t).classList.remove('hidden');
   document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
   document.getElementById('b-'+t).classList.add('active');
-  if(t==='charts'||t==='trade') setTimeout(()=>{drawCandles('candleCanvas'); drawCandles('fullCandleCanvas');},50);
+  if(t==='charts') setTimeout(()=>{attachTVEvents(); drawCandles('fullCandleCanvas');},30);
+  if(t==='equitify') setTimeout(()=>{generateEquitifyAnalysis();},30);
+  if(t==='chat') setTimeout(()=>{renderChat();},30);
 }
-window.calcCost=()=>{let q=Number(document.getElementById('tradeQty').value||0); let cost=q*db.mid*1.005; document.getElementById('tradeCost').textContent=fmt(cost); document.getElementById('costLabel').textContent='Cost: '+fmt(cost);}
+window.calcCost=()=>{let q=Number(document.getElementById('tradeQty').value||0); let cost=q*db.mid*1.005; let el=document.getElementById('tradeCost'); if(el) el.textContent=fmt(cost); let cl=document.getElementById('costLabel'); if(cl) cl.textContent='Cost: '+fmt(cost);}
 function calcLivePL(acc){
   if(!acc||acc.shares==0) return {livePL:0, percent:0, equity:acc?acc.bal:0, costBasis:0, marketValue:0, totalPL:acc?acc.realizedPL||0:0};
   let costBasis=acc.shares*acc.avg;
@@ -337,9 +431,10 @@ window.requestDeposit=()=>{
   let dep={id:Date.now(),memberIdx:current,memberName:db.members[current].name,amount:amt,method:document.getElementById('depMethod').value,ref:document.getElementById('depRef').value.trim(),status:'PENDING',time:Date.now(),timeStr:new Date().toLocaleString()};
   if(!db.deposits) db.deposits=[];
   db.deposits.push(dep);
-  db.ledger.push(`${new Date().toLocaleTimeString()} REQUEST DEPOSIT ${fmt(amt)} by ${dep.memberName}`);
+  db.ledger.push(`${new Date().toLocaleTimeString()} REQUEST DEPOSIT ${fmt(amt)} by ${dep.memberName} - WAITING ADMIN APPROVAL`);
   document.getElementById('depAmt').value=''; document.getElementById('depRef').value='';
-  renderAll(); saveFast();
+  livelyUpdate(); saveFast();
+  alert(`Deposit request sent to Admin! KES ${amt.toLocaleString()} will be added ONLY when Admin approves.`);
 }
 window.requestWithdrawal=()=>{
   let amt=parseFloat(document.getElementById('withAmt').value);
@@ -351,16 +446,13 @@ window.requestWithdrawal=()=>{
   let w={id:Date.now(),memberIdx:current,memberName:db.members[current].name,amount:amt,phone:phone,status:'PENDING',time:Date.now(),timeStr:new Date().toLocaleString()};
   if(!db.withdrawals) db.withdrawals=[];
   db.withdrawals.push(w);
-  db.ledger.push(`${new Date().toLocaleTimeString()} REQUEST WITHDRAWAL ${fmt(amt)} by ${w.memberName}`);
+  db.ledger.push(`${new Date().toLocaleTimeString()} REQUEST WITHDRAWAL ${fmt(amt)} by ${w.memberName} - WAITING ADMIN APPROVAL`);
   document.getElementById('withAmt').value=''; document.getElementById('withPhone').value='';
-  let oldPrice=db.mid;
-  db.mid=Math.max(1,db.mid - amt/100000);
-  db.candles.push({t:Date.now(),o:oldPrice,h:Math.max(oldPrice,db.mid)+0.3,l:Math.min(oldPrice,db.mid)-0.8,c:db.mid});
-  if(db.candles.length>50)db.candles.shift();
-  renderAll(); saveFast();
+  livelyUpdate(); saveFast();
+  alert(`Withdrawal request sent to Admin! Waiting approval.`);
 }
 window.approveDeposit=(id)=>{
-  if(current!==0)return;
+  if(current!==0)return alert('ADMIN ONLY');
   let dep=db.deposits.find(d=>d.id===id);
   if(!dep||dep.status=='COMPLETED')return;
   let acc=db.accounts[dep.memberIdx];
@@ -369,12 +461,12 @@ window.approveDeposit=(id)=>{
   acc.totDep=(acc.totDep||0)+dep.amount;
   db.totComp+=fee;
   dep.status='COMPLETED';
-  db.ledger.push(`${new Date().toLocaleTimeString()} ✅ APPROVED DEPOSIT ${fmt(dep.amount)} for ${dep.memberName} - Net ${fmt(net)} added to Available Balance`);
-  renderAll(); saveFast();
+  db.ledger.push(`${new Date().toLocaleTimeString()} ADMIN APPROVED DEPOSIT ${fmt(dep.amount)} for ${dep.memberName} - Net ${fmt(net)} added`);
+  livelyUpdate(); saveFast();
 }
-window.rejectDeposit=(id)=>{if(current!==0)return; db.deposits=db.deposits.filter(d=>d.id!==id); renderAll(); saveFast();}
+window.rejectDeposit=(id)=>{if(current!==0)return; db.deposits=db.deposits.filter(d=>d.id!==id); livelyUpdate(); saveFast();}
 window.approveWithdrawal=(id)=>{
-  if(current!==0)return;
+  if(current!==0)return alert('ADMIN ONLY');
   let w=db.withdrawals.find(d=>d.id===id);
   if(!w||w.status=='COMPLETED')return;
   let acc=db.accounts[w.memberIdx];
@@ -386,10 +478,10 @@ window.approveWithdrawal=(id)=>{
   db.mid=Math.max(1,db.mid - w.amount/80000);
   db.candles.push({t:Date.now(),o:oldPrice,h:Math.max(oldPrice,db.mid)+0.2,l:Math.min(oldPrice,db.mid)-1,c:db.mid});
   if(db.candles.length>50)db.candles.shift();
-  db.ledger.push(`${new Date().toLocaleTimeString()} ✅ APPROVED WITHDRAWAL ${fmt(w.amount)} for ${w.memberName}`);
-  renderAll(); saveFast();
+  db.ledger.push(`${new Date().toLocaleTimeString()} ADMIN APPROVED WITHDRAWAL ${fmt(w.amount)} for ${w.memberName} - Price ${oldPrice.toFixed(2)} -> ${db.mid.toFixed(2)}`);
+  livelyUpdate(); saveFast();
 }
-window.rejectWithdrawal=(id)=>{if(current!==0)return; db.withdrawals=db.withdrawals.filter(d=>d.id!==id); renderAll(); saveFast();}
+window.rejectWithdrawal=(id)=>{if(current!==0)return; db.withdrawals=db.withdrawals.filter(d=>d.id!==id); livelyUpdate(); saveFast();}
 window.doTrade=(type)=>{
   let s=parseFloat(document.getElementById('tradeQty').value);
   if(!s||s<=0){alert('Enter shares');return;}
@@ -398,7 +490,7 @@ window.doTrade=(type)=>{
   let oldPrice=db.mid;
   if(type==='buy'){
     let tot=gross+comm;
-    if(acc.bal<=0){alert('Insufficient balance. Deposit via M-Pesa 0741097779 in Finance tab.');return;}
+    if(acc.bal<=0){alert('Insufficient balance. Deposit via M-Pesa 0741097779 - Wait Admin Approve.');return;}
     if(tot>acc.bal){alert('Need '+fmt(tot)+' have '+fmt(acc.bal));return;}
     acc.bal-=tot;
     let newCost=acc.shares*acc.avg+gross;
@@ -421,11 +513,11 @@ window.doTrade=(type)=>{
     db.candles.push({t:Date.now(),o:oldPrice,h:Math.max(oldPrice,db.mid)+0.2,l:Math.min(oldPrice,db.mid)-0.8,c:db.mid});
   }
   if(db.candles.length>50)db.candles.shift();
-  db.ledger.push(`${new Date().toLocaleTimeString()} ${type.toUpperCase()} ${s} KES OIL @ ${price.toFixed(2)} by ${db.members[current].name}`);
-  renderAll(); saveFast();
+  db.ledger.push(`${new Date().toLocaleTimeString()} ${type.toUpperCase()} ${s} KES OIL @ ${price.toFixed(2)} by ${db.members[current].name} - Price ${oldPrice.toFixed(2)} -> ${db.mid.toFixed(2)}`);
+  livelyUpdate(); saveFast();
 }
-window.setCompanyProfit=()=>{if(current!==0)return; let p=parseFloat(document.getElementById('compProfitInput').value); if(!p)return alert('Enter P/L'); let half=p/2; db.totComp+=p; db.totReinvest+=half; db.hidden+=half; let ch=half/200000; let oldPrice=db.mid; db.mid=Math.max(1,db.mid+ch); if(p<0){db.fear+=Math.abs(p)/50000; db.candles.push({t:Date.now(),o:oldPrice,h:Math.max(oldPrice,db.mid)+0.3,l:Math.min(oldPrice,db.mid)-1.5,c:db.mid});}else{db.fear=Math.max(0,db.fear - Math.abs(p)/80000); db.candles.push({t:Date.now(),o:oldPrice,h:Math.max(oldPrice,db.mid)+0.8,l:Math.min(oldPrice,db.mid)-0.3,c:db.mid});} if(db.candles.length>50)db.candles.shift(); db.ledger.push(`${new Date().toLocaleTimeString()} COMPANY ${p>0?'PROFIT':'LOSS'} ${fmt(p)}`); renderAll(); saveFast();}
-window.resetAllZero=()=>{if(current!==0)return; if(!confirm('Reset all to 0?'))return; db.accounts={}; db.members.forEach((m,i)=>{db.accounts[i]={bal:0,shares:0,avg:0,totDep:0,totWith:0,realizedPL:0}}); db.mid=224; db.totComp=0; db.totReinvest=0; db.hidden=0; db.fear=0; db.news=[]; db.deposits=[]; db.withdrawals=[]; db.ledger=["KES OIL PLC - Built by DEDAN ONYANGO CEO - Kisumu - Live Finance System"]; let price=224; let base=new Date(2026,10,11); db.candles=[]; for(let i=29;i>=0;i--){let d=new Date(base); d.setDate(base.getDate()-i); let open=price; let ch=(Math.random()-0.48)*1.8; let close=Math.max(1,open+ch); let high=Math.max(open,close)+Math.random()*1.2; let low=Math.min(open,close)-Math.random()*1.2; low=Math.max(1,low); db.candles.push({t:d.getTime(),o:open,h:high,l:low,c:close}); price=close;} db.mid=price; renderAll(); saveFast();}
+window.setCompanyProfit=()=>{if(current!==0)return; let p=parseFloat(document.getElementById('compProfitInput').value); if(!p)return alert('Enter P/L'); let half=p/2; db.totComp+=p; db.totReinvest+=half; db.hidden+=half; let ch=half/200000; let oldPrice=db.mid; db.mid=Math.max(1,db.mid+ch); if(p<0){db.fear+=Math.abs(p)/50000; db.candles.push({t:Date.now(),o:oldPrice,h:Math.max(oldPrice,db.mid)+0.3,l:Math.min(oldPrice,db.mid)-1.5,c:db.mid});}else{db.fear=Math.max(0,db.fear - Math.abs(p)/80000); db.candles.push({t:Date.now(),o:oldPrice,h:Math.max(oldPrice,db.mid)+0.8,l:Math.min(oldPrice,db.mid)-0.3,c:db.mid});} if(db.candles.length>50)db.candles.shift(); db.ledger.push(`${new Date().toLocaleTimeString()} COMPANY ${p>0?'PROFIT':'LOSS'} ${fmt(p)} - Price ${oldPrice.toFixed(2)} -> ${db.mid.toFixed(2)}`); livelyUpdate(); saveFast();}
+window.resetAllZero=()=>{if(current!==0)return; if(!confirm('Reset all to 0? Equitify will reset to 1000.'))return; db.accounts={}; db.members.forEach((m,i)=>{if(i<8) db.accounts[i]={bal:0,shares:0,avg:0,totDep:0,totWith:0,realizedPL:0}}); db.accounts[8]={bal:1000,shares:0,avg:0,totDep:0,totWith:0,realizedPL:0}; db.mid=224; db.totComp=0; db.totReinvest=0; db.hidden=0; db.fear=0; db.news=[]; db.deposits=[]; db.withdrawals=[]; db.chat=[]; db.equitify={phase:'ACCUMULATION',dayOpen:224,moveUsed:0,proposals:[],startCash:1000,log:["EQUITIFY reset to 1000"]}; db.ledger=["KES OIL PLC - Built by DEDAN ONYANGO CEO - Kisumu - Equitify Start 1000"]; let price=224; let base=new Date(2026,10,11); db.candles=[]; for(let i=29;i>=0;i--){let d=new Date(base); d.setDate(base.getDate()-i); let open=price; let ch=(Math.random()-0.48)*1.8; let close=Math.max(1,open+ch); let high=Math.max(open,close)+Math.random()*1.2; let low=Math.min(open,close)-Math.random()*1.2; low=Math.max(1,low); db.candles.push({t:d.getTime(),o:open,h:high,l:low,c:close}); price=close;} db.mid=price; tvReset(); livelyUpdate(); saveFast();}
 window.triggerDividends=()=>{
   if(current!==0)return;
   if(db.hidden<=0)return alert('No hidden pool');
@@ -444,11 +536,277 @@ window.triggerDividends=()=>{
   });
   document.getElementById('lastDiv').textContent=`Pool ${fmt(pool)} distributed to ${totalShares} shares - Credited to Available Balance`;
   db.hidden=0;
-  db.ledger.push(`${new Date().toLocaleTimeString()} 💸 DIVIDENDS ${fmt(pool)} distributed - Added to Available Balance`);
-  renderAll(); saveFast();
+  db.ledger.push(`${new Date().toLocaleTimeString()} DIVIDENDS ${fmt(pool)} distributed - Added to Available Balance`);
+  livelyUpdate(); saveFast();
 }
-window.publishNews=()=>{if(current!==0)return; let t=document.getElementById('newsTitle').value.trim(); let b=document.getElementById('newsBody').value.trim(); if(!t)return alert('Headline'); db.news.push({id:Date.now(),t:t,body:b,p:db.mid,time:new Date().toLocaleString(),author:db.members[current].name}); renderAll(); saveFast();}
+window.publishNews=()=>{if(current!==0)return; let t=document.getElementById('newsTitle').value.trim(); let b=document.getElementById('newsBody').value.trim(); if(!t)return alert('Headline'); db.news.push({id:Date.now(),t:t,body:b,p:db.mid,time:new Date().toLocaleString(),author:db.members[current].name}); db.ledger.push(`${new Date().toLocaleTimeString()} NEWS: ${t} - Impacts Equitify Analysis`); livelyUpdate(); saveFast();}
+// ===== MEMBERS CHAT =====
+window.sendChat=function(){
+  let inp=document.getElementById('chatInput');
+  let text=inp.value.trim();
+  if(!text) return;
+  if(!db.chat) db.chat=[];
+  db.chat.push({id:Date.now()+Math.random(), memberIdx:current, name:db.members[current].name, text:text.slice(0,500), time:new Date().toLocaleString(), ts:Date.now()});
+  if(db.chat.length>200) db.chat=db.chat.slice(-200);
+  inp.value='';
+  livelyUpdate(); saveFast();
+}
+window.deleteChat=function(id){
+  if(current!==0) return alert('Admin only can delete');
+  db.chat=(db.chat||[]).filter(m=>m.id!==id);
+  livelyUpdate(); saveFast();
+}
+function renderChat(){
+  let box=document.getElementById('chatBox'); if(!box) return;
+  let chats=db.chat||[];
+  if(chats.length===0){ box.innerHTML='<div class="sub" style="text-align:center;padding:20px">No messages yet — Say Hi to the family 👋</div>'; return; }
+  box.innerHTML=chats.slice(-100).map(m=>{
+    let isMe=m.memberIdx===current;
+    let isAdmin=m.memberIdx===0;
+    return `<div class="chat-msg" style="align-self:${isMe?'flex-end':'flex-start'};background:${isMe?'#00d395':'#171e3a'};color:${isMe?'#000':'#eef1f8'};border-bottom-${isMe?'right':'left'}-radius:4px">
+      <div style="font-size:10px;font-weight:800;opacity:.8">${isAdmin?'👑 ':''}${m.name} • ${m.time}</div>
+      <div style="font-size:13px;margin-top:2px;line-height:1.5">${String(m.text).replace(/</g,'&lt;')}</div>
+      ${current===0?`<button onclick="deleteChat(${m.id})" style="background:none;border:none;color:#ff4757;font-size:10px;cursor:pointer;margin-top:4px">Delete</button>`:''}
+    </div>`;
+  }).join('');
+  box.scrollTop=box.scrollHeight;
+}
+const EQUITIFY_IDX = 8;
+function ensureEquitify(){
+  if(!db.accounts[EQUITIFY_IDX]) db.accounts[EQUITIFY_IDX]={bal:1000,shares:0,avg:0,totDep:0,totWith:0,realizedPL:0};
+  if(!db.members[EQUITIFY_IDX]) db.members[EQUITIFY_IDX]={name:"EQUITIFY INC - INVESTOR",pin:"9999"};
+  if(!db.equitify) db.equitify={phase:'ACCUMULATION',dayOpen:db.mid,moveUsed:0,proposals:[],startCash:1000,log:["EQUITIFY INC - Start 1000 - Institutional"]};
+  if(!db.equitify.proposals) db.equitify.proposals=[];
+  if(db.equitify.startCash===undefined) db.equitify.startCash=1000;
+}
+window.saveEquitifyStartingBalance=function(){
+  if(current!==0) return alert('ADMIN ONLY');
+  ensureEquitify();
+  let newBal=parseFloat(document.getElementById('eqStartBalInput').value);
+  if(!newBal||newBal<=0) return alert('Enter valid starting balance e.g 1000');
+  if(!confirm(`Set EQUITIFY starting balance to KES ${newBal.toLocaleString()}?`)) return;
+  let acc=db.accounts[EQUITIFY_IDX];
+  acc.bal=newBal;
+  db.equitify.startCash=newBal;
+  db.equitify.startCashChanged=true;
+  db.equitify.dayOpen=db.mid;
+  db.equitify.log.push(`${new Date().toLocaleTimeString()} ADMIN set EQUITIFY starting balance to KES ${newBal.toLocaleString()}`);
+  db.ledger.push(`${new Date().toLocaleTimeString()} ADMIN set EQUITIFY starting balance to KES ${newBal.toLocaleString()}`);
+  livelyUpdate(); saveFast();
+  alert(`Saved! Equitify Start = KES ${newBal.toLocaleString()}`);
+}
+function getNewsSentiment(){
+  let news=db.news||[];
+  if(news.length===0) return {score:0,label:"No News",detail:"No news published yet - Neutral"};
+  let text=news.slice(-5).map(n=>(n.t+" "+(n.body||"")).toLowerCase()).join(" ");
+  let positive=["profit","growth","good","up","rise","strong","success","dividend","expand","win","bull","positive","record"];
+  let negative=["loss","down","fall","crash","bad","risk","drop","fear","sell","bear","negative","problem","decline"];
+  let pos=0,neg=0; positive.forEach(w=>{if(text.includes(w))pos++;}); negative.forEach(w=>{if(text.includes(w))neg++;});
+  let score=pos-neg;
+  if(score>1) return {score,label:"BULLISH",detail:`${pos} positive vs ${neg} negative in last ${Math.min(5,news.length)} news`};
+  if(score<-1) return {score,label:"BEARISH",detail:`${neg} negative vs ${pos} positive in last ${Math.min(5,news.length)} news`};
+  return {score,label:"NEUTRAL",detail:`Balanced - ${pos} pos / ${neg} neg`};
+}
+function getFundamentals(){
+  let totalShares=Object.values(db.accounts).reduce((s,a)=>s+a.shares,0);
+  let totalDeposits=Object.values(db.accounts).reduce((s,a)=>s+(a.totDep||0),0);
+  let totalBal=Object.values(db.accounts).reduce((s,a)=>s+a.bal,0);
+  let fear=db.fear||0; let companyProfit=db.totComp||0; let hidden=db.hidden||0;
+  let score=0; let reasons=[];
+  if(companyProfit>0){score+=1; reasons.push(`Company Profit +${fmt(companyProfit)} - Strong`);}
+  else if(companyProfit<0){score-=1; reasons.push(`Company Loss ${fmt(companyProfit)} - Weak`);}
+  else reasons.push(`No company profit yet - Neutral`);
+  if(hidden>50000){score+=1; reasons.push(`Hidden Pool ${fmt(hidden)} large - Supports price`);}
+  else if(hidden>0){reasons.push(`Hidden Pool ${fmt(hidden)} small`);}
+  else reasons.push(`Hidden Pool empty`);
+  if(fear>25){score-=1; reasons.push(`Fear High ${fear.toFixed(1)} - Shakeout / Accumulation`);}
+  else if(fear<10){score+=0.5; reasons.push(`Fear Low ${fear.toFixed(1)} - Good for Markup`);}
+  else reasons.push(`Fear Moderate ${fear.toFixed(1)}`);
+  if(totalShares>1500){reasons.push(`Total Shares ${totalShares} high - Distribution risk`);}
+  else if(totalShares<300){reasons.push(`Total Shares ${totalShares} low - Accumulation opportunity`);}
+  else reasons.push(`Total Shares ${totalShares} moderate`);
+  reasons.push(`Total Deposits ${fmt(totalDeposits)}`);
+  reasons.push(`Total Family Cash ${fmt(totalBal)}`);
+  return {score,reasons,totalShares,totalDeposits,totalBal,companyProfit,hidden,fear};
+}
+window.generateEquitifyAnalysis=function(){
+  ensureEquitify();
+  let news=getNewsSentiment(); let fund=getFundamentals();
+  let totalScore=fund.score+(news.score>0?1:news.score<0?-1:0);
+  let recommendation="ACCUMULATION"; let recReason="";
+  if(totalScore>=2){recommendation="MARKUP"; recReason="Fundamentals strong + News Bullish - Push price up";}
+  else if(totalScore<=-2){recommendation="SHAKEOUT"; recReason="Fundamentals weak + News Bearish - Quick dip";}
+  else if(fund.totalShares>1500 && fund.fear<10){recommendation="DISTRIBUTION"; recReason="Many shares + Fear low - Sell slowly";}
+  else if(totalScore<=0){recommendation="ACCUMULATION"; recReason="Neutral / Weak - Keep price low";}
+  else {recommendation="MARKUP"; recReason="Slightly positive - Gentle markup";}
+  db.equitify.lastAnalysis={recommendation,totalScore,news,fund,time:new Date().toLocaleString()};
+  let el=document.getElementById('eqAnalysis'); if(el) el.innerHTML=`<b>Market Rate:</b> Mid ${fmt(db.mid)} | Bid ${fmt(db.mid-2)} | Ask ${fmt(db.mid+2)} | Spread 4.00 - Synced Lively<br><b>News:</b> ${news.label} - ${news.detail}<br><b>Fundamental:</b> ${fund.score.toFixed(1)} / News ${news.score} = Total ${totalScore.toFixed(1)}<br><br><b>Breakdown:</b><br>${fund.reasons.join('<br>')}<br><br><b>Recommendation:</b> <span style="color:#FFD700;font-size:15px;font-weight:800">${recommendation}</span><br>${recReason}<br><span style="font-size:11px;color:#8b93a7">Analysis: ${new Date().toLocaleString()}</span>`;
+  renderEquitifyRates();
+  return db.equitify.lastAnalysis;
+}
+window.useAnalysisForProposal=function(){
+  let a=generateEquitifyAnalysis();
+  document.getElementById('eqMode').value=a.recommendation;
+  document.getElementById('eqReason').value=`Analysis: ${a.news.label} | Fund ${a.fund.score} | ${a.fund.reasons[0]} | ${a.fund.reasons[1]||''}`;
+  alert(`Proposal filled: ${a.recommendation} - Click Submit to Risk`);
+}
+function renderEquitifyRates(){
+  let midEl=document.getElementById('eqRateMid'); if(!midEl) return;
+  midEl.textContent=fmt(db.mid);
+  document.getElementById('eqRateBid').textContent=fmt(db.mid-2);
+  document.getElementById('eqRateAsk').textContent=fmt(db.mid+2);
+  document.getElementById('eqRateSpread').textContent="4.00 KES";
+  let fear=db.fear||0;
+  document.getElementById('eqRateFear').textContent=fear.toFixed(1);
+  document.getElementById('eqRateFearText').textContent=fear>25?"High Fear":fear<10?"Low Fear":"Moderate";
+  document.getElementById('eqRateTime').textContent=new Date().toLocaleTimeString();
+}
+window.createEquitifyProposal=function(){
+  if(current!==0) return alert('ADMIN ONLY');
+  ensureEquitify();
+  let mode=document.getElementById('eqMode').value;
+  let qty=parseInt(document.getElementById('eqQty').value)||0;
+  let reason=document.getElementById('eqReason').value.trim()||"Market analysis";
+  if(!qty||qty<=0) return alert('Enter shares');
+  let estPrice=db.mid;
+  if(mode==='ACCUMULATION') estPrice=db.mid*0.99;
+  if(mode==='SHAKEOUT') estPrice=db.mid*0.985;
+  if(mode==='MARKUP') estPrice=db.mid*1.01;
+  if(mode==='DISTRIBUTION') estPrice=db.mid*0.995;
+  let proposal={id:Date.now()+Math.random(),mode,qty,estPrice:Number(estPrice.toFixed(2)),estValue:Number((qty*estPrice).toFixed(2)),reason,analyst:"RESEARCH",riskStatus:'PENDING',treasuryStatus:'PENDING',committeeStatus:'PENDING',adminStatus:'PENDING',timeStr:new Date().toLocaleString(),history:[`${new Date().toLocaleTimeString()} RESEARCH: Proposed ${mode} ${qty} shares - ${reason}`]};
+  db.equitify.proposals.push(proposal);
+  db.equitify.log.push(`${proposal.timeStr} RESEARCH proposed ${mode} ${qty} @ ~${proposal.estPrice}`);
+  livelyUpdate(); saveFast();
+}
+window.riskReviewProposal=function(id,approve){
+  if(current!==0) return;
+  ensureEquitify();
+  let p=db.equitify.proposals.find(x=>x.id===id); if(!p) return;
+  let maxMove=parseFloat(document.getElementById('eqMaxMove')?.value||15);
+  let maxLoss=parseFloat(document.getElementById('eqMaxLossPct')?.value||5);
+  let movePct=Math.abs(p.estPrice-db.equitify.dayOpen)/db.equitify.dayOpen*100;
+  if(!approve){p.riskStatus='REJECTED'; p.history.push(`${new Date().toLocaleTimeString()} RISK: REJECTED`);}
+  else if(movePct>maxMove){p.riskStatus='REJECTED'; p.history.push(`${new Date().toLocaleTimeString()} RISK: REJECTED - Move ${movePct.toFixed(2)}% > ${maxMove}%`);}
+  else {p.riskStatus='APPROVED'; p.history.push(`${new Date().toLocaleTimeString()} RISK: APPROVED - Move ${movePct.toFixed(2)}% within ${maxMove}%, Loss within ${maxLoss}%`);}
+  livelyUpdate(); saveFast();
+}
+window.treasuryCheckProposal=function(id,approve){
+  if(current!==0) return;
+  ensureEquitify();
+  let p=db.equitify.proposals.find(x=>x.id===id); if(!p) return;
+  if(p.riskStatus!=='APPROVED') return alert('Risk must approve first');
+  let acc=db.accounts[EQUITIFY_IDX];
+  if(!approve){p.treasuryStatus='REJECTED'; p.history.push(`${new Date().toLocaleTimeString()} TREASURY: REJECTED`);}
+  else if(p.mode==='MARKUP' && (p.qty*(db.mid+2) > acc.bal)){p.treasuryStatus='REJECTED'; p.history.push(`${new Date().toLocaleTimeString()} TREASURY: REJECTED - Need ${fmt(p.qty*(db.mid+2))} have ${fmt(acc.bal)} (Start 1000)`);}
+  else if((p.mode==='DISTRIBUTION'||p.mode==='ACCUMULATION') && p.qty > acc.shares && acc.shares>0){p.treasuryStatus='APPROVED_WITH_NOTE'; p.history.push(`${new Date().toLocaleTimeString()} TREASURY: APPROVED WITH NOTE - Sell only ${acc.shares} available`);}
+  else {p.treasuryStatus='APPROVED'; p.history.push(`${new Date().toLocaleTimeString()} TREASURY: APPROVED - Cash ${fmt(acc.bal)} / Shares ${acc.shares} sufficient`);}
+  livelyUpdate(); saveFast();
+}
+window.committeeVoteProposal=function(id,approve){
+  if(current!==0) return;
+  ensureEquitify();
+  let p=db.equitify.proposals.find(x=>x.id===id); if(!p) return;
+  if(p.riskStatus!=='APPROVED') return alert('Risk must approve first');
+  if(p.treasuryStatus!=='APPROVED' && p.treasuryStatus!=='APPROVED_WITH_NOTE') return alert('Treasury must approve first');
+  if(!approve){p.committeeStatus='REJECTED'; p.history.push(`${new Date().toLocaleTimeString()} COMMITTEE: REJECTED`);}
+  else {p.committeeStatus='APPROVED'; p.history.push(`${new Date().toLocaleTimeString()} COMMITTEE: APPROVED - Sent to Admin`);}
+  livelyUpdate(); saveFast();
+}
+window.confirmEquitifyOrder=function(id){
+  if(current!==0) return alert('ADMIN ONLY');
+  ensureEquitify();
+  let eq=db.equitify;
+  let p=eq.proposals.find(x=>x.id===id); if(!p) return;
+  if(p.riskStatus!=='APPROVED') return alert('Risk not approved');
+  if(p.treasuryStatus!=='APPROVED' && p.treasuryStatus!=='APPROVED_WITH_NOTE') return alert('Treasury not approved');
+  if(p.committeeStatus!=='APPROVED') return alert('Committee not approved');
+  if(!confirm(`ADMIN FINAL CONFIRM?\nEQUITIFY: ${p.mode}\n${p.qty} shares @ ~KES ${p.estPrice}\nValue: KES ${p.estValue}\nReason: ${p.reason}`)) return;
+  let acc=db.accounts[EQUITIFY_IDX];
+  let oldPrice=db.mid;
+  if(p.mode==='MARKUP'){
+    let cost=p.qty*(db.mid+2); 
+    if(cost>acc.bal) return alert('Equitify insufficient - Start 1000, have '+fmt(acc.bal));
+    acc.bal-=cost; let prev=acc.shares; acc.shares+=p.qty; acc.avg=acc.shares>0?((prev*acc.avg+cost)/acc.shares):cost/p.qty;
+    db.mid=db.mid*1.01; db.fear=Math.max(0,(db.fear||0)-1);
+  } else {
+    let sellPrice=db.mid-2; let sellQty=Math.min(p.qty, acc.shares);
+    let realized = sellQty>0 ? (sellPrice - (acc.avg||0))*sellQty : 0;
+    if(sellQty>0) acc.realizedPL=(acc.realizedPL||0)+realized;
+    acc.bal+=sellQty*sellPrice; acc.shares=Math.max(0, acc.shares-p.qty);
+    if(p.mode==='ACCUMULATION'){db.mid=Math.max(1,db.mid*0.99); db.fear=Math.max(0,(db.fear||0)+1);}
+    if(p.mode==='SHAKEOUT'){db.mid=Math.max(1,db.mid*0.985); db.fear=(db.fear||0)+2; db.mid=db.mid*1.005;}
+    if(p.mode==='DISTRIBUTION'){db.mid=Math.max(1,db.mid*0.995);}
+  }
+  let maxMove=parseFloat(document.getElementById('eqMaxMove')?.value||15);
+  let movePct=Math.abs(db.mid-eq.dayOpen)/eq.dayOpen*100;
+  if(movePct>maxMove) db.mid=eq.dayOpen*(1+(maxMove/100)*(db.mid>eq.dayOpen?1:-1));
+  eq.phase=p.mode; eq.moveUsed=movePct;
+  p.adminStatus='FILLED_BY_ADMIN'; p.filledPrice=Number(db.mid.toFixed(2)); p.filledAt=new Date().toLocaleString();
+  p.history.push(`${new Date().toLocaleTimeString()} ADMIN: FILLED - Price ${oldPrice.toFixed(2)} -> ${db.mid.toFixed(2)}`);
+  db.candles.push({t:Date.now(),o:oldPrice,h:Math.max(oldPrice,db.mid)+0.3,l:Math.min(oldPrice,db.mid)-0.3,c:db.mid});
+  if(db.candles.length>50) db.candles.shift();
+  db.ledger.push(`${new Date().toLocaleTimeString()} EQUITIFY ${p.mode} FILLED BY ADMIN - ${p.qty} @ ${db.mid.toFixed(2)} - Impacts Price + All P/L + Chart`);
+  document.getElementById('eqDecisionOut').innerHTML=`<b>FILLED</b><br>${p.mode} ${p.qty} @ ${db.mid.toFixed(2)}`;
+  livelyUpdate(); saveFast();
+}
+window.rejectEquitifyOrder=function(id){if(current!==0) return; ensureEquitify(); db.equitify.proposals=db.equitify.proposals.filter(o=>o.id!==id); livelyUpdate(); saveFast();}
+window.resetEquitifyDay=function(){if(current!==0) return; ensureEquitify(); db.equitify.dayOpen=db.mid; db.equitify.moveUsed=0; livelyUpdate(); saveFast();}
+function renderEquitifyPanel(){
+  ensureEquitify();
+  updateEquitifyLiveProfit();
+  renderEquitifyRates();
+  let eq=db.equitify; let acc=db.accounts[EQUITIFY_IDX];
+  let el=document.getElementById('eqCash'); if(!el) return;
+  let livePL = eq.livePL||0;
+  let equity = eq.equity||acc.bal;
+  let start = eq.startCash||1000;
+  document.getElementById('eqStartBalDisplay').textContent=fmt(start);
+  el.textContent=fmt(acc.bal);
+  document.getElementById('eqSharesHeld').textContent=acc.shares;
+  let liveEl=document.getElementById('eqLivePL'); if(liveEl){ liveEl.textContent=fmt(livePL); liveEl.style.color=livePL>=0?'#00d395':'#ff4757'; }
+  let livePctEl=document.getElementById('eqLivePLPct'); if(livePctEl){ let pct=acc.shares>0&&acc.avg?((db.mid-acc.avg)/acc.avg*100):0; livePctEl.textContent=`${pct.toFixed(2)}% - Auto when Mid moves - Start 1000`; livePctEl.style.color=pct>=0?'#00d395':'#ff4757'; }
+  document.getElementById('eqIncome').textContent=fmt(acc.realizedPL||0);
+  document.getElementById('eqEquity').textContent=fmt(equity);
+  let eqNote=document.getElementById('eqEquityNote'); if(eqNote) eqNote.textContent=`Start ${fmt(start)} + Total Profit ${fmt((acc.realizedPL||0)+livePL)} - Lively`;
+  document.getElementById('eqPhase').textContent=eq.phase;
+  document.getElementById('eqSignal').textContent=eq.phase==='ACCUMULATION'?'Buy Zone':eq.phase==='MARKUP'?'Sell Zone':eq.phase;
+  document.getElementById('eqMoveUsed').textContent=(eq.moveUsed||0).toFixed(2)+'%';
+  document.getElementById('eqLossUsed').textContent=fmt(eq.lossUsed||0);
+  document.getElementById('eqLog').innerHTML=(eq.log||[]).slice().reverse().join('<br>');
+  let startInput=document.getElementById('eqStartBalInput');
+  if(startInput && document.activeElement!==startInput){ startInput.value=start; let note=document.getElementById('eqStartBalNote'); if(note) note.textContent=`Current Start: ${fmt(start)} • Cash: ${fmt(acc.bal)} • Equity: ${fmt(equity)} - Auto profit lively`; }
+  if(!eq.lastAnalysis){ try{ generateEquitifyAnalysis(); }catch(e){} }
+  let pendEl=document.getElementById('eqPending');
+  if(pendEl){
+    let list=eq.proposals.slice().reverse();
+    pendEl.innerHTML=list.length===0?'<div class="sub" style="color:#00d395">No proposals - Create one from Research</div>':list.map(p=>{
+      let canAdmin=p.riskStatus==='APPROVED' && (p.treasuryStatus==='APPROVED'||p.treasuryStatus==='APPROVED_WITH_NOTE') && p.committeeStatus==='APPROVED' && p.adminStatus==='PENDING';
+      return `<div class="depCard" style="border:2px solid ${p.adminStatus==='FILLED_BY_ADMIN'?'#00d395':'#FFD700'}">
+        <b>${p.mode} - ${p.qty} shares</b> @ ~KES ${p.estPrice} = KES ${p.estValue.toLocaleString()}<br>
+        <span style="font-size:11px">Reason: ${p.reason}</span><br>
+        <span style="font-size:10px">${p.timeStr} • Status: ${p.adminStatus}</span><br>
+        <div style="font-size:11px;line-height:1.8;margin-top:6px">
+          1. RESEARCH: Proposed<br>
+          2. RISK: <b style="color:${p.riskStatus==='APPROVED'?'#00d395':p.riskStatus==='REJECTED'?'#ff4757':'#f59e0b'}">${p.riskStatus}</b> ${p.riskStatus==='PENDING'?`<button class="btn btn-buy" style="padding:4px 8px" onclick="riskReviewProposal(${p.id},true)">Approve Risk</button> <button class="btn btn-ghost" style="padding:4px 8px;color:#ff4757" onclick="riskReviewProposal(${p.id},false)">Reject</button>`:''}<br>
+          3. TREASURY: <b style="color:${p.treasuryStatus.includes('APPROVED')?'#00d395':p.treasuryStatus==='REJECTED'?'#ff4757':'#f59e0b'}">${p.treasuryStatus}</b> ${p.treasuryStatus==='PENDING'?`<button class="btn btn-buy" style="padding:4px 8px" onclick="treasuryCheckProposal(${p.id},true)">Approve Treasury</button> <button class="btn btn-ghost" style="padding:4px 8px;color:#ff4757" onclick="treasuryCheckProposal(${p.id},false)">Reject</button>`:''}<br>
+          4. COMMITTEE: <b style="color:${p.committeeStatus==='APPROVED'?'#00d395':p.committeeStatus==='REJECTED'?'#ff4757':'#f59e0b'}">${p.committeeStatus}</b> ${p.committeeStatus==='PENDING'?`<button class="btn btn-buy" style="padding:4px 8px" onclick="committeeVoteProposal(${p.id},true)">Approve Committee</button> <button class="btn btn-ghost" style="padding:4px 8px;color:#ff4757" onclick="committeeVoteProposal(${p.id},false)">Reject</button>`:''}<br>
+          5. ADMIN: <b>${p.adminStatus}</b>
+        </div>
+        <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
+          ${canAdmin?`<button class="btn btn-orange" onclick="confirmEquitifyOrder(${p.id})">Admin Final Confirm & Fill</button>`:''}
+          <button class="btn btn-ghost" style="color:#ff4757" onclick="rejectEquitifyOrder(${p.id})">Delete Proposal</button>
+        </div>
+        <div class="sub" style="margin-top:6px">${p.history.join('<br>')}</div>
+      </div>`
+    }).join('');
+  }
+}
 window.renderAll=()=>{
+  if(window.renderRAF) return;
+  window.renderRAF=requestAnimationFrame(()=>{ window.renderRAF=null; renderAllInstant(); });
+}
+window.renderAllInstant=()=>{
+  ensureEquitify(); renderEquitifyPanel(); renderChat();
   let bid=db.mid-2,ask=db.mid+2;
   document.getElementById('midPrice').textContent=db.mid.toFixed(2)+' KES';
   document.getElementById('bid1').textContent=bid.toFixed(2);
@@ -482,15 +840,15 @@ window.renderAll=()=>{
     let plColor=r.livePL>=0?'#00d395':'#ff4757';
     let percentColor=r.percent>=0?'#00d395':'#ff4757';
     return `<div class="row" style="${idx==0?'background:linear-gradient(90deg,#1a1600 0%,#11162a 100%);border-radius:10px;padding:10px;margin:2px 0':''}">
-      <span><b>${rankIcon} ${r.name}</b><br><span style="font-size:10px;color:var(--muted)">${r.shares} 🛢️ shares • Cost ${fmt(r.costBasis)} • Bal ${fmt(r.bal)}</span><br><span style="font-size:11px;color:${plColor}">P/L: ${fmt(r.livePL)} • </span><span style="font-size:11px;color:${percentColor};font-weight:900">${r.percent.toFixed(2)}% deviation</span></span>
-      <span style="text-align:right"><b style="color:${plColor}">${fmt(r.livePL)}</b><br><span style="font-size:10px;color:var(--muted)">Equity: ${fmt(r.equity)}</span><br><span style="font-size:10px;color:${percentColor};font-weight:900">${r.percent>=0?'▲':'▼'} ${r.percent.toFixed(2)}%</span></span>
+      <span><b>${rankIcon} ${r.name}</b><br><span style="font-size:10px;color:var(--muted)">${r.shares} shares • Cost ${fmt(r.costBasis)} • Bal ${fmt(r.bal)}</span><br><span style="font-size:11px;color:${plColor}">P/L: ${fmt(r.livePL)} • </span><span style="font-size:11px;color:${percentColor};font-weight:800">${r.percent.toFixed(2)}% deviation</span></span>
+      <span style="text-align:right"><b style="color:${plColor}">${fmt(r.livePL)}</b><br><span style="font-size:10px;color:var(--muted)">Equity: ${fmt(r.equity)}</span><br><span style="font-size:10px;color:${percentColor};font-weight:800">${r.percent>=0?'▲':'▼'} ${r.percent.toFixed(2)}%</span></span>
     </div>`;
   }).join('');
   document.getElementById('membersList').innerHTML=boardHTML||'<div class="sub">No data</div>';
   document.getElementById('membersListFull').innerHTML=boardHTML;
   document.getElementById('tradeFeed').innerHTML=db.ledger.slice().reverse().slice(0,15).map(l=>`<div class="row"><span>${l}</span></div>`).join('')||'<div class="sub">No trades</div>';
   document.getElementById('ledger').innerHTML=db.ledger.slice().reverse().slice(0,40).join('<br>');
-  document.getElementById('newsList').innerHTML=!db.news.length?'<div class="sub">No news yet</div>':db.news.slice().reverse().map(n=>`<div class="newsItem"><b>🛢️ ${n.t}</b><br><span class="sub">${n.body||''}</span><br><span class="sub">${n.time} • ${fmt(n.p)}</span></div>`).join('');
+  document.getElementById('newsList').innerHTML=!db.news.length?'<div class="sub">No news yet</div>':db.news.slice().reverse().map(n=>`<div class="newsItem"><b>${n.t}</b><br><span class="sub">${n.body||''}</span><br><span class="sub">${n.time} • ${fmt(n.p)}</span></div>`).join('');
   document.getElementById('totComp').textContent=fmt(db.totComp);
   document.getElementById('totReinvest').textContent=fmt(db.totReinvest);
   document.getElementById('hidPool').textContent=fmt(db.hidden);
@@ -498,7 +856,7 @@ window.renderAll=()=>{
   let myDepEl=document.getElementById('myDeposits');
   if(myDepEl){
     let myDeps=(db.deposits||[]).filter(d=>d.memberIdx==current).reverse();
-    myDepEl.innerHTML=myDeps.length==0?'<div class="sub">No deposits yet</div>':myDeps.map(d=>`<div class="depCard"><b>${fmt(d.amount)}</b> • ${d.method} • ${d.ref||''}<br><span style="font-size:10px">${d.timeStr} • <b style="color:${d.status=='PENDING'?'orange':'#00d395'}">${d.status}</b></span></div>`).join('');
+    myDepEl.innerHTML=myDeps.length==0?'<div class="sub">No deposits yet - Request above, goes to Admin</div>':myDeps.map(d=>`<div class="depCard"><b>${fmt(d.amount)}</b> • ${d.method} • ${d.ref||''}<br><span style="font-size:10px">${d.timeStr} • <b style="color:${d.status=='PENDING'?'orange':'#00d395'}">${d.status} ${d.status=='PENDING'?'- Waiting Admin':''}</b></span></div>`).join('');
   }
   let myWithEl=document.getElementById('myWithdrawals');
   if(myWithEl){
@@ -508,42 +866,91 @@ window.renderAll=()=>{
   let adminDepEl=document.getElementById('adminDeposits');
   if(adminDepEl){
     let pending=(db.deposits||[]).filter(d=>d.status!=='COMPLETED').reverse();
-    adminDepEl.innerHTML=pending.length==0?'<div class="sub" style="color:#00d395">✅ No pending deposits</div>':pending.map(d=>`<div class="depCard" style="border:2px solid orange"><b>🟡 ${fmt(d.amount)}</b> from <b>${d.memberName}</b><br>${d.method} • ${d.ref||''}<br><span style="font-size:10px">${d.timeStr}</span><br><div style="display:flex;gap:6px;margin-top:8px"><button class="btn btn-buy" onclick="approveDeposit(${d.id})">✅ APPROVE - Add ${fmt(d.amount*0.99)}</button><button class="btn btn-ghost" style="color:#ff4757" onclick="rejectDeposit(${d.id})">❌ Reject</button></div></div>`).join('');
+    adminDepEl.innerHTML=pending.length==0?'<div class="sub" style="color:#00d395">No pending deposits - All approved</div>':pending.map(d=>`<div class="depCard" style="border:2px solid orange"><b>${fmt(d.amount)}</b> from <b>${d.memberName}</b><br>${d.method} • ${d.ref||''}<br><span style="font-size:10px">${d.timeStr} • Waiting Admin</span><br><div style="display:flex;gap:6px;margin-top:8px"><button class="btn btn-buy" onclick="approveDeposit(${d.id})">Approve - Add ${fmt(d.amount*0.99)} to Finance</button><button class="btn btn-ghost" style="color:#ff4757" onclick="rejectDeposit(${d.id})">Reject</button></div></div>`).join('');
   }
   let adminWithEl=document.getElementById('adminWithdrawals');
   if(adminWithEl){
     let pending=(db.withdrawals||[]).filter(w=>w.status!=='COMPLETED').reverse();
-    adminWithEl.innerHTML=pending.length==0?'<div class="sub" style="color:#00d395">✅ No pending withdrawals</div>':pending.map(w=>`<div class="depCard" style="border:2px solid #ff4757"><b>🔴 ${fmt(w.amount)}</b> from <b>${w.memberName}</b><br>${w.phone}<br><span style="font-size:10px">${w.timeStr}</span><br><div style="display:flex;gap:6px;margin-top:8px"><button class="btn btn-blue" onclick="approveWithdrawal(${w.id})">✅ APPROVE</button><button class="btn btn-ghost" onclick="rejectWithdrawal(${w.id})">❌ Reject</button></div></div>`).join('');
+    adminWithEl.innerHTML=pending.length==0?'<div class="sub" style="color:#00d395">No pending withdrawals</div>':pending.map(w=>`<div class="depCard" style="border:2px solid #ff4757"><b>${fmt(w.amount)}</b> from <b>${w.memberName}</b><br>${w.phone}<br><span style="font-size:10px">${w.timeStr}</span><br><div style="display:flex;gap:6px;margin-top:8px"><button class="btn btn-blue" onclick="approveWithdrawal(${w.id})">Approve - Deduct + Impact Price</button><button class="btn btn-ghost" onclick="rejectWithdrawal(${w.id})">Reject</button></div></div>`).join('');
   }
   calcCost();
-  if(window.chartTimeout) clearTimeout(window.chartTimeout);
-  window.chartTimeout=setTimeout(()=>{drawCandles('candleCanvas'); drawCandles('fullCandleCanvas');}, 50);
 }
 function drawCandles(canvasId){
   let c=document.getElementById(canvasId); if(!c) return;
+  if(c.offsetParent===null && canvasId==='fullCandleCanvas') return;
   let w=c.getBoundingClientRect().width||700; let h=canvasId==='fullCandleCanvas'?420:200;
+  if(w<50) return;
   c.width=w*2; c.height=h*2;
   let ctx=c.getContext('2d'); ctx.scale(2,2);
   ctx.clearRect(0,0,w,h);
   if(!db.candles.length) return;
-  let cs=db.candles.slice(-30);
+  let total=db.candles.length;
+  let visible=Math.min(tvState.visible, total);
+  let offset=Math.max(0, Math.min(tvState.offset, Math.max(0, total-visible)));
+  let start=Math.max(0, total - visible - offset);
+  let cs=db.candles.slice(start, start+visible);
   let min=Math.min(...cs.map(x=>x.l)), max=Math.max(...cs.map(x=>x.h));
   let range=max-min||1; min-=range*0.12; max+=range*0.12; range=max-min;
-  let pl=8,pr=50,pb=20,pt=10; let cw=w-pl-pr,ch=h-pt-pb;
-  ctx.strokeStyle='#1a2142'; for(let i=0;i<=4;i++){let y=pt+(i/4)*ch; ctx.beginPath(); ctx.moveTo(pl,y); ctx.lineTo(pl+cw,y); ctx.stroke();}
-  let candleW=Math.max(5, cw/cs.length*0.55); let gap=(cw-candleW*cs.length)/cs.length;
+  let pl=58, pr=68, pb=26, pt=10; let cw=w-pl-pr, ch=h-pt-pb;
+  ctx.fillStyle='#0b0e1e'; ctx.fillRect(0,0,w,h);
+  ctx.font='10px JetBrains Mono, monospace'; ctx.textAlign='left';
+  for(let i=0;i<=5;i++){
+    let y=pt+(i/5)*ch;
+    let priceVal=max-(i/5)*range;
+    ctx.strokeStyle='rgba(255,255,255,0.06)'; ctx.beginPath(); ctx.moveTo(pl,y); ctx.lineTo(pl+cw,y); ctx.stroke();
+    ctx.fillStyle='#8b93a7'; ctx.fillText(priceVal.toFixed(2), pl+cw+6, y+3);
+  }
+  for(let i=0;i<=4;i++){
+    let x=pl+(i/4)*cw;
+    ctx.strokeStyle='rgba(255,255,255,0.04)'; ctx.beginPath(); ctx.moveTo(x,pt); ctx.lineTo(x,pt+ch); ctx.stroke();
+  }
   cs.forEach((cc,i)=>{
-    let x=pl+i*(candleW+gap)+gap/2;
+    if(i%Math.ceil(visible/5)===0 || i===cs.length-1){
+      let x=pl+i*(cw/visible)+(cw/visible)/2;
+      let d=new Date(cc.t);
+      let label=d.toLocaleDateString('en-KE',{day:'numeric',month:'short'})+' '+d.toLocaleTimeString('en-KE',{hour:'2-digit',minute:'2-digit'});
+      ctx.fillStyle='#8b93a7'; ctx.textAlign='center'; ctx.fillText(label, x, h-8);
+    }
+  });
+  let step=cw/visible;
+  cs.forEach((cc,i)=>{
+    let x=pl+i*step+step*0.18;
+    let bw=Math.max(3, step*0.64);
     let yh=pt+(1-(cc.h-min)/range)*ch;
     let yl=pt+(1-(cc.l-min)/range)*ch;
     let yo=pt+(1-(cc.o-min)/range)*ch;
     let ycl=pt+(1-(cc.c-min)/range)*ch;
-    let isG=cc.c>=cc.o;
-    ctx.strokeStyle=isG?'#00d395':'#ff4757'; ctx.beginPath(); ctx.moveTo(x+candleW/2, yh); ctx.lineTo(x+candleW/2, yl); ctx.stroke();
-    ctx.fillStyle=isG?'#00d395':'#ff4757'; ctx.fillRect(x, Math.min(yo,ycl), candleW, Math.abs(ycl-yo)||2);
+    let isUp=cc.c>=cc.o;
+    let col=isUp?'#26a69a':'#ef5350';
+    if(tvState.hover===start+i){ ctx.fillStyle='rgba(255,215,0,0.08)'; ctx.fillRect(x-2, pt, bw+4, ch); }
+    ctx.strokeStyle=col; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(x+bw/2, yh); ctx.lineTo(x+bw/2, yl); ctx.stroke();
+    ctx.fillStyle=col; ctx.fillRect(x, Math.min(yo,ycl), bw, Math.max(1.5, Math.abs(ycl-yo)));
   });
+  let yLast=pt+(1-(db.mid-min)/range)*ch;
+  let lastCol=db.candles[total-1].c>=db.candles[total-1].o?'#26a69a':'#ef5350';
+  ctx.strokeStyle=lastCol; ctx.setLineDash([4,4]); ctx.beginPath(); ctx.moveTo(pl,yLast); ctx.lineTo(pl+cw,yLast); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle=lastCol; ctx.fillRect(pl+cw, yLast-9, pr, 18);
+  ctx.fillStyle='#fff'; ctx.font='bold 10px JetBrains Mono, monospace'; ctx.textAlign='left'; ctx.fillText(db.mid.toFixed(2), pl+cw+6, yLast+3);
+  let hoverIdx=tvState.hover;
+  if(hoverIdx>=start && hoverIdx<start+cs.length && tvState.crossX>0){
+    let hi=hoverIdx-start;
+    let hx=pl+hi*step+step/2;
+    ctx.strokeStyle='rgba(255,255,255,0.25)'; ctx.setLineDash([3,3]); ctx.beginPath(); ctx.moveTo(hx,pt); ctx.lineTo(hx,pt+ch); ctx.stroke(); ctx.beginPath(); ctx.moveTo(pl,tvState.crossY); ctx.lineTo(pl+cw,tvState.crossY); ctx.stroke(); ctx.setLineDash([]);
+    let cc=db.candles[hoverIdx];
+    let chg=((cc.c-cc.o)/cc.o*100);
+    let ohlc=`KES OIL  O ${cc.o.toFixed(2)}  H ${cc.h.toFixed(2)}  L ${cc.l.toFixed(2)}  C ${cc.c.toFixed(2)}  ${chg>=0?'+':''}${chg.toFixed(2)}%  •  ${new Date(cc.t).toLocaleString()}`;
+    let ohlcEl = canvasId==='fullCandleCanvas' ? document.getElementById('tvOhlcFull') : document.getElementById('tvOhlcMini');
+    if(ohlcEl) ohlcEl.innerHTML=`<b>${ohlc}</b>`;
+  } else {
+    let last=db.candles[total-1];
+    let chg=((last.c-last.o)/last.o*100);
+    let ohlcEl = canvasId==='fullCandleCanvas' ? document.getElementById('tvOhlcFull') : document.getElementById('tvOhlcMini');
+    if(ohlcEl) ohlcEl.innerHTML=`KES OIL  O ${last.o.toFixed(2)}  H ${last.h.toFixed(2)}  L ${last.l.toFixed(2)}  C ${last.c.toFixed(2)}  <span class="${chg>=0?'up':'down'}">${chg>=0?'+':''}${chg.toFixed(2)}%</span>`;
+  }
+  if(offset>0){ ctx.fillStyle='rgba(255,215,0,0.9)'; ctx.font='bold 10px Inter, sans-serif'; ctx.textAlign='left'; ctx.fillText(`← History • ${offset} candles back • Click Reset to return to live`, pl+8, pt+14); }
 }
-window.resetCandles=()=>{if(current!==0)return; db.candles=[]; let price=224; let base=new Date(2026,10,11); for(let i=29;i>=0;i--){let d=new Date(base); d.setDate(base.getDate()-i); let open=price; let ch=(Math.random()-0.48)*1.8; let close=Math.max(1,open+ch); let high=Math.max(open,close)+Math.random()*1.2; let low=Math.min(open,close)-Math.random()*1.2; low=Math.max(1,low); db.candles.push({t:d.getTime(),o:open,h:high,l:low,c:close}); price=close;} db.mid=price; renderAll(); saveFast();}
+window.resetCandles=()=>{if(current!==0)return; db.candles=[]; let price=224; let base=new Date(2026,10,11); for(let i=29;i>=0;i--){let d=new Date(base); d.setDate(base.getDate()-i); let open=price; let ch=(Math.random()-0.48)*1.8; let close=Math.max(1,open+ch); let high=Math.max(open,close)+Math.random()*1.2; let low=Math.min(open,close)-Math.random()*1.2; low=Math.max(1,low); db.candles.push({t:d.getTime(),o:open,h:high,l:low,c:close}); price=close;} db.mid=price; tvReset(); livelyUpdate(); saveFast();}
 init();
 document.getElementById('tradeQty')?.addEventListener('input', calcCost);
+setTimeout(()=>{attachTVEvents();},500);
 </script></body></html>
